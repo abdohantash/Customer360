@@ -59318,6 +59318,28 @@ body::-webkit-scrollbar {
   max-height: 500px;
 }
 
+.not-found {
+  width: max-content;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.not-found img{
+  margin: 0 auto;
+  display: block;
+  height: 200px;
+  margin-bottom: 25px;
+}
+
+.not-found h3{
+  
+margin: 0;
+  
+font-weight: normal;
+  
+font-size: 20px;
+}
+
 .center-loader {
   display: flex;
   justify-content: center;
@@ -59456,3 +59478,4 @@ body::-webkit-scrollbar {
       opacity: 0;
   }
 }
+
