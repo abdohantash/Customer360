@@ -57926,8 +57926,8 @@ body:not(.bg-body) {
   }
 
   .topbar-search form .search-input:focus {
-    background-color: var(--kt-topbar-btn-bg-color);
-    border: 1px solid var(--kt-topbar-btn-bg-color);
+    background-color: rgb(255 255 255 / 8%);
+    border-color: rgb(255 255 255 / 8%);
     color: var(--kt-white);
   }
 
@@ -59269,4 +59269,5 @@ body::-webkit-scrollbar {
   border-radius: 4px;
   border: 0;
   margin-top: 20px;
+  text-transform: capitalize;
 }
