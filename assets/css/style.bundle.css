@@ -58306,12 +58306,12 @@ em {
   width: 270px;
 }
 
+
 .title-card {
   color: #EEF0F9;
   font-weight: normal;
   letter-spacing: 0.5px;
 }
-
 
 .consumed {
   width: 300px;
@@ -58422,6 +58422,17 @@ em {
 
 .port-ul li em.disabled {
   border: 6px solid #FF3226;
+}
+
+.port .restart--port {
+  border: 1px solid #ffb032;
+  background: #ffb032;
+  color: #fff;
+  padding: 5px 15px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 3px;
+  margin-top: 15px;
 }
 
 .total-points {
@@ -59107,6 +59118,11 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+.super-agent .agentbox ul li.active {
+  background: #3e75ff;
+  background: linear-gradient(to right, #3e75ff, #252f4d);
+}
+
 .super-agent .agentbox ul li:last-child {
   margin-bottom: 0;
 }
@@ -59177,4 +59193,80 @@ body::-webkit-scrollbar {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
+}
+
+.d-flex-login {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.img-login {
+  width: 100%;
+  background: #ffffff0f;
+  margin: 30px;
+  margin-right: 0;
+  border-radius: 20px;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-login img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.card-login {
+  min-width: 50%;
+}
+
+.card-login .card-body {width: 65%;margin: auto;}
+
+.card-login .form-control::placeholder {
+  color: #92929F;
+}
+
+.header-login {
+  margin-bottom: 50px;
+}
+
+.header-login h2 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-family: 'Roboto-Medium';
+  font-size: 21px;
+}
+
+.header-login p {
+  color: #fff;
+  margin: 0;
+  font-size: 15px;
+}
+
+.card-login .header-login img {
+  height: 55px;
+  margin-bottom: 30px;
+}
+
+.card-login .form-control {
+  background: #3c4253;
+  border: 0;
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 16px;
+}
+
+.card-login .btn-login {
+  background: #3E75FF;
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 0;
+  margin-top: 20px;
 }

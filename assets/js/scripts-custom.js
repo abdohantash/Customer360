@@ -29,3 +29,9 @@ $(document).on('change', '.phone-part .form-check-input', function () {
         $(this).closest('.phone-part').find('.phone-ul input').prop("type", "password")
     }   
 });
+
+
+$(document).on('click', '.agentbox ul li', function () {
+    $('.agentbox ul li').removeClass('active');
+    $(this).addClass('active');
+});
