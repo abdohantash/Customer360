@@ -59239,7 +59239,7 @@ body::-webkit-scrollbar {
 }
 
 .header-login {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .header-login h2 {
@@ -59258,7 +59258,7 @@ body::-webkit-scrollbar {
 
 .card-login .header-login img {
   height: 55px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card-login .form-control {
@@ -59316,6 +59316,7 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   display: block;
   max-height: 500px;
+  opacity: .8;
 }
 
 .not-found {
@@ -59479,3 +59480,8 @@ font-size: 20px;
   }
 }
 
+.captcha-div {
+  height: 200px;
+  margin: 0 !important;
+  margin-top: 20px !important;
+}

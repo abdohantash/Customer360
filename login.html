@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/logo.svg" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slidercaptcha/slidercaptcha.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -32,6 +33,9 @@
                         <input type="password" placeholder="Password" name="password" autocomplete="off"
                             class="form-control" />
                     </div>
+                    <div class="fv-row">
+                        <div id="captcha" class="captcha-div"></div>
+                    </div>
                     <div class="d-grid">
                         <button type="submit" class="btn-login">Log in</button>
                     </div>
@@ -45,8 +49,17 @@
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/plugins/apexcharts.min.js"></script>
     <script src="assets/plugins/circle-progress.js"></script>
+    <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/js/scripts-custom.js"></script>
+    <script>
+        var captcha = sliderCaptcha({
+            id: 'captcha',
+            onSuccess: function () {
+            // do something
+            }
+        });
+    </script>
 </body>
 
 </html>
