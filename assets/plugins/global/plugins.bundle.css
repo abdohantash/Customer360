@@ -33636,19 +33636,20 @@ table.dataTable th {
 }
 
 div.dataTables_wrapper div.dataTables_length {
-  padding: 1rem 0;
+  padding: 0;
+  padding-bottom: 10px;
 }
 
 div.dataTables_wrapper div.dataTables_filter {
-  padding: 1rem 0;
+  padding: 0;
+  padding-bottom: 10px;
 }
 
 div.dataTables_wrapper div.dataTables_info {
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  color: var(--kt-gray-700);
-  padding: 1rem 0;
+  color: #BCBCCB;
 }
 div.dataTables_wrapper div.dataTables_info .select-info,
 div.dataTables_wrapper div.dataTables_info .select-item {
@@ -33662,8 +33663,8 @@ div.dataTables_length + div.dataTables_info {
 }
 
 div.dataTables_wrapper div.dataTables_paginate {
-  padding: 1rem 0;
-  margin-left: 0.5rem;
+  margin-left: 0;
+  padding-top: 0.85em;
 }
 div.dataTables_wrapper div.dataTables_paginate .pagination {
   margin: 0;

@@ -8,8 +8,10 @@
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/logo.svg" />
+    <link href="assets/plugins/datatable/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/light-mode.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
@@ -35,6 +37,7 @@
                         </div>
                         <a href="index.html">
                             <img alt="Logo" src="assets/media/logo.svg" class="logo-header" />
+                            <img alt="Logo" src="assets/media/logo-light.svg" class="logo-light" />
                         </a>
                         <div class="links-header">
                             <a href="#" class="active">Home</a>
@@ -105,8 +108,8 @@
 
                         <!--begin::Theme mode-->
                         <div class="d-flex align-items-center">
-                            <a href="#" class="btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
-                                <span class="svg-icon theme-dark-show svg-icon-2">
+                            <a href="#" class="toggle-mode btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
+                                <span class="svg-icon theme-light-show svg-icon-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -138,7 +141,7 @@
                                             fill="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="svg-icon theme-light-show  svg-icon-2">
+                                <span class="svg-icon theme-dark-show  svg-icon-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -695,7 +698,7 @@
                                         <div class="dts-box">
                                             <h3 class="title-part">customer offers</h3>
                                             <div class="table-responsive">
-                                                <table class="table table-row-bordered">
+                                                <table class="table datatable table-row-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -767,7 +770,7 @@
                                         <div class="dts-box">
                                             <h3 class="title-part">customer order list</h3>
                                             <div class="table-responsive">
-                                                <table class="table table-row-bordered">
+                                                <table class="table datatable table-row-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -856,7 +859,7 @@
                                         <div class="dts-box">
                                             <h3 class="title-part">Total Outstanding Amount: 0</h3>
                                             <div class="table-responsive">
-                                                <table class="table table-row-bordered">
+                                                <table class="table datatable table-row-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -1046,7 +1049,7 @@
                                         <div class="dts-box">
                                             <h3 class="title-part">Trouble Ticketing</h3>
                                             <div class="table-responsive">
-                                                <table class="table table-row-bordered">
+                                                <table class="table datatable table-row-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -1114,7 +1117,7 @@
                                         <div class="dts-box">
                                             <h3 class="title-part">Service Request</h3>
                                             <div class="table-responsive">
-                                                <table class="table table-row-bordered">
+                                                <table class="table datatable table-row-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th>
@@ -1277,6 +1280,7 @@
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/plugins/apexcharts.min.js"></script>
     <script src="assets/plugins/circle-progress.js"></script>
+    <script src="assets/plugins/datatable/datatables.bundle.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/js/scripts-custom.js"></script>
     <script>
@@ -1332,6 +1336,24 @@
 
         var chart = new ApexCharts(document.querySelector(".progress-consumed"), options);
         chart.render();
+    </script>
+    <script>
+        $("table.datatable").DataTable({
+            "language": {
+                "lengthMenu": "Show _MENU_",
+            },
+            "dom": "<'row'" +
+                "<'col-sm-6 d-flex align-items-center justify-conten-start'f>" +
+                "<'col-sm-6 d-flex align-items-center justify-content-end'l>" +
+                ">" +
+
+                "<'table-responsive'tr>" +
+
+                "<'row'" +
+                "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
+                "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
+                ">"
+        });
     </script>
 </body>
 
