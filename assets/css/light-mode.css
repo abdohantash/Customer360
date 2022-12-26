@@ -35,7 +35,8 @@
 [data-theme=light] .super-agent-btn,
 [data-theme=light] .btns-fixed-right .btn--fixed,
 [data-theme=light] .scrolltop,
-[data-theme=light] .scrolltop:hover {
+[data-theme=light] .scrolltop:hover,
+[data-theme=light] .search-head {
     background: #702283;
 }
 
