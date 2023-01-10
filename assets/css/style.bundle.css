@@ -2922,7 +2922,7 @@ textarea.form-control-lg {
 }
 
 .form-switch .form-check-input {
-  width: 3.25rem;
+  width: 3rem;
   margin-left: -3.75rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
   background-position: left center;
@@ -44621,7 +44621,7 @@ code:not([class*=language-]) {
 }
 
 .form-switch.form-check-solid .form-check-input {
-  height: 24px;
+  height: 20px;
   background-image: var(--kt-form-switch-bg-image-solid);
   border-radius: 3.25rem;
 }
@@ -58106,6 +58106,14 @@ em {
   color: #FF3226;
 }
 
+.status.selling {
+  color: #FFB032;
+}
+
+.status.return {
+  color: #00E1D7;
+}
+
 .status img {
   width: 15px;
   height: 15px;
@@ -58283,7 +58291,7 @@ em {
 
 .consumed p {
   position: absolute;
-  bottom: 30px;
+  bottom: 80px;
   left: 0;
   right: 0;
   text-align: center;
@@ -58317,7 +58325,7 @@ em {
 .management-consumed {
   display: flex;
   gap: 40px;
-  align-items: end;
+  align-items: center;
 }
 
 .dates {
@@ -58358,7 +58366,7 @@ em {
 .port-ul li {
   display: flex;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .port-ul li span {
@@ -58504,9 +58512,20 @@ em {
   gap: 40px;
   overflow: auto;
   overflow-y: hidden;
-
 }
 
+.tabs-style-shape::-webkit-scrollbar-thumb {
+  height: 16px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #83899a !important;
+}
+
+.tabs-style-shape::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
 
 .tabs {
   position: relative;
@@ -58616,11 +58635,11 @@ em {
 .tabs-style-shape li .nav-link span {
   display: block;
   overflow: hidden;
-  padding: 10px;
+  padding: 10px 0;
   background-color: #323e60;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 17px;
   position: relative;
   text-transform: capitalize;
 }
@@ -58739,42 +58758,70 @@ em {
 }
 
 .certificate,
-.phone-part {
+.phone-part,
+.lname-part,
+.birth-part,
+.email-part,
+.address-part {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  align-items: baseline;
+  gap: 20px;
 }
 
 .certificate-ul,
-.phone-ul {
+.phone-ul,
+.lname-ul,
+.birth-ul,
+.email-ul,
+.address-ul {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .certificate-ul li,
-.phone-ul li {
+.phone-ul li,
+.lname-ul li,
+.birth-ul li,
+.email-ul li,
+.address-ul li {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
 .certificate-ul li p,
-.phone-ul li p {
+.phone-ul li p,
+.lname-ul li p,
+.birth-ul li p,
+.email-ul li p,
+.address-ul li p
+ {
   margin: 0;
   color: #BCBCCB;
   font-size: 14px;
   display: flex;
   gap: 7px;
   white-space: nowrap;
+  min-width: 120px;
 }
 
 .certificate-ul li p img,
-.phone-ul li p img {
+.phone-ul li p img,
+.lname-ul li p img,
+.birth-ul li p img,
+.email-ul li p img,
+.address-ul li p img {
   width: 20px;
 }
 
 .certificate-ul li input,
-.phone-ul li input {
+.phone-ul li input,
+.lname-ul li input,
+.birth-ul li input,
+.email-ul li input,
+.address-ul li input {
   padding: 0;
   margin: 0;
   border: 0;
@@ -58782,7 +58829,7 @@ em {
   letter-spacing: .2px;
   font-size: 15px;
   color: #EEF0F9;
-  width: auto;
+  width: 240px;
   outline: unset;
   box-shadow: unset;
 }
@@ -58921,10 +58968,11 @@ em {
   word-break: break-word;
 }
 
-.certificate--phone {
-  display: flex;
-  gap: 50px;
+.private-dts {
+  display: grid;
+  gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -59062,6 +59110,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
 }
 
 .super-agent .agentbox h4 span {
@@ -59477,6 +59526,95 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   color: #fff !important;
 }
 
+.outage {
+  justify-content: space-between;
+  width: max-content;
+  cursor: pointer;
+}
+
+.outage em {
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.outage .no-outage {
+  background: #FF3226;
+  background: linear-gradient(to bottom, #f3473d, #891e18);
+}
+
+.outage .have-outage {
+  background: #29A32C;
+  background: linear-gradient(to bottom, #38bc3b, #166818);
+}
+
+.outage b {
+  font-weight: normal;
+}
+
+.check--dts {
+  border: 1px solid #323e60;
+  background: #323e60;
+  color: #fff;
+  padding: 5px 15px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 3px;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+.points--dts {
+  border: 1px solid #395bae;
+  background: #395bae;
+  color: #fff;
+  padding: 5px 15px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 3px;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+.dts-billing .port-ul {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  background: #161d31;
+  background: linear-gradient(to right, #1b2237, #283046);
+  width: max-content;
+}
+
+.dts-billing .port-ul li {
+  margin: 0;
+}
+
+.dts-billing .port-ul li span {
+  font-size: 15px;
+}
+
+.dts-billing .port-ul li p {
+  font-size: 15px;
+}
+
+.service-name {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.service-name img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+
 /* responsive */
 
 @media (max-width:1300px) {
@@ -59558,17 +59696,25 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     height: 20px;
   }
 
-  .certificate--phone {
+  .private-dts {
     gap: 0;
   }
 
   .certificate,
-  .phone-part {
+  .phone-part,
+  .lname-part,
+  .birth-part,
+  .email-part,
+  .address-part {
     gap: 15px;
   }
 
   .certificate-ul li input,
-  .phone-ul li input {
+  .phone-ul li input,
+  .lname-ul li input,
+  .birth-ul li input,
+  .email-ul li input,
+  .address-ul li input {
     font-size: 14px;
   }
 
@@ -59616,7 +59762,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   }
 
   .certificate-ul li input,
-  .phone-ul li input {
+  .phone-ul li input,
+  .lname-ul li input,
+  .birth-ul li input,
+  .email-ul li input,
+  .address-ul li input  .phone-ul li input {
     letter-spacing: 0;
     width: 130px;
   }
@@ -59786,13 +59936,17 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     font-size: 14px;
   }
 
-  .certificate--phone {
+  .private-dts {
     gap: 12px;
     flex-wrap: wrap;
   }
 
   .certificate-ul li input,
-  .phone-ul li input {
+  .phone-ul li input,
+  .lname-ul li input,
+  .birth-ul li input,
+  .email-ul li input,
+  .address-ul li input {
     width: auto;
   }
 
@@ -59809,7 +59963,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .dts-box {
     padding: 10px 0 0;
-}
+  }
 
   .not-found img {
     height: 100px;
@@ -59897,6 +60051,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .form-switch.form-check-solid .form-check-input {
     height: 18px;
+    width: 34px;
   }
 
   .title-part {
@@ -59962,7 +60117,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   }
 
   .certificate-ul li p img,
-  .phone-ul li p img {
+  .phone-ul li p img,
+  .lname-ul li p img,
+  .birth-ul li p img,
+  .email-ul li p img,
+  .address-ul li p img {
     width: 17px;
   }
 
@@ -59996,19 +60155,35 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   }
 
   .certificate-ul,
-  .phone-ul {
+  .phone-ul,
+  .lname-ul,
+  .birth-ul,
+  .email-ul,
+  .address-ul {
     flex-wrap: wrap;
     gap: 8px;
   }
 
   .certificate,
-  .phone-part {
+  .phone-part,
+  .lname-part,
+  .birth-part,
+  .email-part,
+  .address-part {
     align-items: start;
   }
 
   .part-info.w-50 {
     width: 100% !important;
   }
+
+  .certificate-ul li p, .phone-ul li p, .lname-ul li p, .birth-ul li p, .email-ul li p, .address-ul li p {
+    min-width: unset;
+  }
+
+  .certificate-ul li input, .phone-ul li input, .lname-ul li input, .birth-ul li input, .email-ul li input, .address-ul li input {
+    width: auto;
+}
 }
 
 @media (max-width:576px) {
@@ -60104,11 +60279,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .title-part {
     font-size: 16px;
     margin-bottom: 15px;
-}
+  }
 
-.part-info .title-part {
-  margin-bottom: 25px;
-}
+  .part-info .title-part {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width:500px) {
@@ -60207,13 +60382,21 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 @media (max-width:450px) {
 
   .certificate,
-  .phone-part {
+  .phone-part,
+  .lname-part,
+  .birth-part,
+  .email-part,
+  .address-part {
     flex-wrap: wrap;
     gap: 10px;
   }
 
   .certificate-ul li p img,
-  .phone-ul li p img {
+  .phone-ul li p img,
+  .lname-ul li p img,
+  .birth-ul li p img,
+  .email-ul li p img,
+  .address-ul li p img {
     display: none;
   }
 

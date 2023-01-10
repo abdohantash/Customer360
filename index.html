@@ -193,6 +193,14 @@
                                         <span>Card Type:</span>
                                         <p><img src="assets/media/icons/fiber-optic.svg" alt="">FTTH</p>
                                     </li>
+                                    <li>
+                                        <span>outage:</span>
+                                        <p class="outage">
+                                            <em class="have-outage"></em>
+                                            <!-- <em class="no-outage"></em> -->
+                                            <b>10</b>
+                                        </p>
+                                    </li>
                                 </ul>
                                 <ul class="bottom-part">
                                     <li class="balance">
@@ -244,6 +252,7 @@
                                                 <b>Consumed</b>
                                             </p>
                                             <h4>WE IOE VDSL Primary Prepaid</h4>
+                                            <button type="button" class="check--dts">check details</button>
                                         </div>
                                         <ul class="dates">
                                             <li>
@@ -258,7 +267,7 @@
                                                 <span>Monthly Rate</span>
                                                 <p>100 EGP</p>
                                             </li>
-                                            </l>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -292,6 +301,7 @@
                                             </li>
                                         </ul>
                                     </div>
+                                    <button type="button" class="points--dts">points details</button>
                                 </div>
                             </div>
                             <div class="card port">
@@ -440,14 +450,92 @@
                                     <span>Service Request</span>
                                 </button>
                             </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="te-Billing-tab" data-bs-toggle="tab"
+                                    data-bs-target="#te-Billing" type="button" role="tab" aria-selected="false"
+                                    tabindex="-1">
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <span>te Billing</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="consumption-details-tab" data-bs-toggle="tab"
+                                    data-bs-target="#consumption-details" type="button" role="tab" aria-selected="false"
+                                    tabindex="-1">
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <span>consumption details</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="resource-tab" data-bs-toggle="tab"
+                                    data-bs-target="#resource" type="button" role="tab" aria-selected="false"
+                                    tabindex="-1">
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <span>resource</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tts-tab" data-bs-toggle="tab"
+                                    data-bs-target="#tts" type="button" role="tab" aria-selected="false"
+                                    tabindex="-1">
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                        <use xlink:href="#tabshape"></use>
+                                    </svg>
+                                    <span>tts</span>
+                                </button>
+                            </li>
                         </ul>
                         <div class="card">
                             <div class="card-body">
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade active show" id="fastinfo" role="tabpanel">
                                         <div class="dts-box">
-                                            <h3 class="client-name">Mr. Ahmed Mohamed Ahmed Saleh</h3>
-                                            <div class="certificate--phone">
+                                            <h3 class="client-name">Mr. Ahmed Mohamed Ahmed</h3>
+                                            <div class="private-dts">
+                                                <div class="address-part">
+                                                    <div
+                                                        class="form-check form-switch form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox">
+                                                    </div>
+                                                    <ul class="address-ul">
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/location.png" alt="">
+                                                                CSO Area:</p>
+                                                            <input type="password" value="Maadi" readonly>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/location.png" alt="">
+                                                                CSO Governorate:</p>
+                                                            <input type="password" value="Cairo" readonly>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/location.png" alt="">
+                                                                CSO Address:</p>
+                                                            <input type="password" value="Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit." readonly>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                                 <div class="certificate">
                                                     <div
                                                         class="form-check form-switch form-check-custom form-check-solid">
@@ -482,6 +570,48 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                <div class="lname-part">
+                                                    <div
+                                                        class="form-check form-switch form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox">
+                                                    </div>
+                                                    <ul class="lname-ul">
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/user.png" alt="">
+                                                                Last Name:</p>
+                                                            <input type="password" value="Saleh" readonly>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="birth-part">
+                                                    <div
+                                                        class="form-check form-switch form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox">
+                                                    </div>
+                                                    <ul class="birth-ul">
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/calendar.png" alt="">
+                                                                Date Of Birth:</p>
+                                                            <input type="password" value="1/1/2000" readonly>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="email-part">
+                                                    <div
+                                                        class="form-check form-switch form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox">
+                                                    </div>
+                                                    <ul class="email-ul">
+                                                        <li>
+                                                            <p>
+                                                                <img src="assets/media/icons/mail.png" alt="">
+                                                                Email:</p>
+                                                            <input type="password" value="LoremIpsum@Email.Com" readonly>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
 
                                             <div class="flex-col">
@@ -491,10 +621,6 @@
                                                         <li>
                                                             <p>First Name:</p>
                                                             <span class="text-blue">Ahmed</span>
-                                                        </li>
-                                                        <li>
-                                                            <p>Last Name:</p>
-                                                            <span class="text-blue">Saleh</span>
                                                         </li>
                                                         <li>
                                                             <p>subscriber status:</p>
@@ -536,29 +662,8 @@
                                                             <span>Male</span>
                                                         </li>
                                                         <li>
-                                                            <p>Date of Birth:</p>
-                                                            <span>1/1/2000</span>
-                                                        </li>
-                                                        <li>
                                                             <p>Nationality:</p>
                                                             <span>Egyptian</span>
-                                                        </li>
-                                                        <li>
-                                                            <p>Email:</p>
-                                                            <span>LoremIpsum@Email.com</span>
-                                                        </li>
-                                                        <li>
-                                                            <p>CSO Area:</p>
-                                                            <span>Maadi</span>
-                                                        </li>
-                                                        <li>
-                                                            <p>CSO Governorate:</p>
-                                                            <span>Cairo</span>
-                                                        </li>
-                                                        <li>
-                                                            <p>CSO Address:</p>
-                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                elit.</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1122,6 +1227,349 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tab-pane fade" id="te-Billing" role="tabpanel">
+                                        <div class="dts-box">
+                                            <h3 class="title-part">Te Billing</h3>
+                                            <div class="dts-billing">
+                                                <ul class="port-ul">
+                                                    <li>
+                                                        <span>Name:</span>
+                                                        <p>تامر صلاح الدين</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>Address:</span>
+                                                        <p>37 ش 18 ب 1 الدلتا</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>Category:</span>
+                                                        <p>WE ارضي</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>status:</span>
+                                                        <div class="status active">
+                                                            <img src="assets/media/icons/Interface-success.svg" alt="">
+                                                            Active
+                                                        </div>
+                                                        <!-- <div class="status disabled">
+                                                            <img src="assets/media/icons/Interface-danger.svg" alt="">
+                                                            Disabled
+                                                        </div> -->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="table datatable table-row-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Due date
+                                                            </th>
+                                                            <th>
+                                                               Amount
+                                                            </th>
+                                                            <th>
+                                                               Status
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>10-2022</td>
+                                                            <td>68.5 EGP</td>
+                                                            <td>
+                                                                <div class="status active">
+                                                                    Paid
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10-2022</td>
+                                                            <td>68.5 EGP</td>
+                                                            <td>
+                                                                <div class="status disabled">
+                                                                    UnPaid
+                                                                </div>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="consumption-details" role="tabpanel">
+                                        <div class="dts-box">
+                                            <h3 class="title-part">Consumption Details</h3>
+                                            <div class="table-responsive">
+                                                <table class="table datatable table-row-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Service
+                                                            </th>
+                                                            <th>
+                                                               Subscriber
+                                                            </th>
+                                                            <th>
+                                                               Total
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/itunes.png" alt="">
+                                                                    iTunes Store
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/google.png" alt="">
+                                                                    Google
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/roblox.png" alt="">
+                                                                    ROBLOX
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/pubg.png" alt="">
+                                                                    PlayerUnknown's Battlegrounds
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/facebook.png" alt="">
+                                                                    Facebook video
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/facebook.png" alt="">
+                                                                    Facebook
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/google-play.png" alt="">
+                                                                    Android Market
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="service-name">
+                                                                    <img src="assets/media/icons/youtube.png" alt="">
+                                                                    YouTube
+                                                                </p>
+                                                            </td>
+                                                            <td>2</td>
+                                                            <td>50</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="resource" role="tabpanel">
+                                        <div class="dts-box">
+                                            <h3 class="title-part">Resource</h3>
+                                            <div class="table-responsive">
+                                                <table class="table datatable table-row-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Serial Number
+                                                            </th>
+                                                            <th>
+                                                                Operation
+                                                            </th>
+                                                            <th>
+                                                                Service Number
+                                                            </th>
+                                                            <th>
+                                                                Operation Time
+                                                            </th>
+                                                            <th>
+                                                                Financial Status
+                                                            </th>
+                                                            <th>
+                                                                offer Name
+                                                            </th>
+                                                            <th>
+                                                                Operator Account
+                                                            </th>
+                                                            <th>
+                                                                Operator OU
+                                                            </th>
+                                                            <th>
+                                                                Customer ID
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>475863682841</td>
+                                                            <td>
+                                                                <div class="status selling">
+                                                                    selling
+                                                                </div>
+                                                            </td>
+                                                            <td>fb5667</td>
+                                                            <td>04-05-2021</td>
+                                                            <td>
+                                                                <div class="status active">
+                                                                    sold
+                                                                </div>
+                                                            </td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>2488854</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>475863682841</td>
+                                                            <td>
+                                                                <div class="status return">
+                                                                    return
+                                                                </div>
+                                                            </td>
+                                                            <td>fb5667</td>
+                                                            <td>04-05-2021</td>
+                                                            <td>
+                                                                <div class="status disabled">
+                                                                    rent
+                                                                </div>
+                                                            </td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>2488854</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tts" role="tabpanel">
+                                        <div class="dts-box">
+                                            <h3 class="title-part">Tts</h3>
+                                            <div class="table-responsive">
+                                                <table class="table datatable table-row-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                               ID
+                                                            </th>
+                                                            <th>
+                                                                problem
+                                                            </th>
+                                                            <th>
+                                                                platform
+                                                            </th>
+                                                            <th>
+                                                                Status
+                                                            </th>
+                                                            <th>
+                                                                date created
+                                                            </th>
+                                                            <th>
+                                                                last update
+                                                            </th>
+                                                            <th>
+                                                                on call
+                                                            </th>
+                                                            <th>
+                                                                creator
+                                                            </th>
+                                                            <th>
+                                                               ticket manager
+                                                            </th>
+                                                            <th>
+                                                                supporter group
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>475863682841</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>ADSL</td>
+                                                            <td>
+                                                                <div class="status disabled">
+                                                                    closed
+                                                                </div>
+                                                                <!-- <div class="status active">
+                                                                    opened
+                                                                </div> -->
+                                                            </td>
+                                                            <td>04-05-2021</td>
+                                                            <td>04-05-2021</td>
+                                                            <td>
+                                                                <div class="status disabled">
+                                                                    NO
+                                                                </div>
+                                                                <!-- <div class="status active">
+                                                                    YES
+                                                                </div> -->
+                                                            </td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>475863682841</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>ADSL</td>
+                                                            <td>
+                                                                <div class="status active">
+                                                                    opened
+                                                                </div>
+                                                            </td>
+                                                            <td>04-05-2021</td>
+                                                            <td>04-05-2021</td>
+                                                            <td>
+                                                                <div class="status active">
+                                                                    YES
+                                                                </div>
+                                                            </td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                            <td>lorem ipsum</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1164,7 +1612,9 @@
             <div class="agentbox">
                 <h4>Actions <span></span></h4>
                 <ul>
-                    <li>get username and password</li>
+                    <li>get password</li>
+                    <li>send username and password</li>
+                    <li>mac not learned</li>
                 </ul>
             </div>
             <div class="agentbox">
@@ -1177,6 +1627,15 @@
                     <li>service-recommendtion</li>
                     <li>line-speed</li>
                     <li>profile-optimization</li>
+                </ul>
+            </div>
+            <div class="agentbox">
+                <h4>Assia historical<span></span></h4>
+                <ul>
+                    <li>clear view historical</li>
+                    <li>line summary historical</li>
+                    <li>service recommendtion historical</li>
+                    <li>CPE version historical</li>
                 </ul>
             </div>
             <div class="agentbox">
