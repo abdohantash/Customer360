@@ -195,7 +195,8 @@
                                     </li>
                                     <li>
                                         <span>outage:</span>
-                                        <p class="outage">
+                                        <p class="outage" data-bs-toggle="modal"
+                                        data-bs-target="#outages">
                                             <em class="have-outage"></em>
                                             <!-- <em class="no-outage"></em> -->
                                             <b>10</b>
@@ -252,7 +253,8 @@
                                                 <b>Consumed</b>
                                             </p>
                                             <h4>WE IOE VDSL Primary Prepaid</h4>
-                                            <button type="button" class="check--dts">check details</button>
+                                            <button type="button" class="check--dts" data-bs-toggle="modal"
+                                                data-bs-target="#usage-details">check details</button>
                                         </div>
                                         <ul class="dates">
                                             <li>
@@ -490,9 +492,8 @@
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tts-tab" data-bs-toggle="tab"
-                                    data-bs-target="#tts" type="button" role="tab" aria-selected="false"
-                                    tabindex="-1">
+                                <button class="nav-link" id="tts-tab" data-bs-toggle="tab" data-bs-target="#tts"
+                                    type="button" role="tab" aria-selected="false" tabindex="-1">
                                     <svg viewBox="0 0 80 60" preserveAspectRatio="none">
                                         <use xlink:href="#tabshape"></use>
                                     </svg>
@@ -532,7 +533,9 @@
                                                             <p>
                                                                 <img src="assets/media/icons/location.png" alt="">
                                                                 CSO Address:</p>
-                                                            <input type="password" value="Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit." readonly>
+                                                            <input type="password"
+                                                                value="Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+                                                                readonly>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -608,7 +611,8 @@
                                                             <p>
                                                                 <img src="assets/media/icons/mail.png" alt="">
                                                                 Email:</p>
-                                                            <input type="password" value="LoremIpsum@Email.Com" readonly>
+                                                            <input type="password" value="LoremIpsum@Email.Com"
+                                                                readonly>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1265,10 +1269,10 @@
                                                                 Due date
                                                             </th>
                                                             <th>
-                                                               Amount
+                                                                Amount
                                                             </th>
                                                             <th>
-                                                               Status
+                                                                Status
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -1306,10 +1310,10 @@
                                                                 Service
                                                             </th>
                                                             <th>
-                                                               Subscriber
+                                                                Subscriber
                                                             </th>
                                                             <th>
-                                                               Total
+                                                                Total
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -1377,7 +1381,8 @@
                                                         <tr>
                                                             <td>
                                                                 <p class="service-name">
-                                                                    <img src="assets/media/icons/google-play.png" alt="">
+                                                                    <img src="assets/media/icons/google-play.png"
+                                                                        alt="">
                                                                     Android Market
                                                                 </p>
                                                             </td>
@@ -1487,7 +1492,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th>
-                                                               ID
+                                                                ID
                                                             </th>
                                                             <th>
                                                                 problem
@@ -1511,7 +1516,7 @@
                                                                 creator
                                                             </th>
                                                             <th>
-                                                               ticket manager
+                                                                ticket manager
                                                             </th>
                                                             <th>
                                                                 supporter group
@@ -1676,6 +1681,142 @@
         </span>
     </div>
 
+
+    <!-- usage-details -->
+    <div class="modal fade" id="usage-details" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">usage details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="usage-div">
+                        <h3>
+                            <i class="fa fa-home"></i>
+                            WE Primary Offer
+                        </h3>
+                        <div class="chart-div">
+                            <div class="usage-chart" id="chart1"></div>
+                            <div class="remaining-consumed-modal">
+                                <p>Remaining 206.91 GB</p>
+                                <p>Consumed<span>43.09</span>GB from<span>250</span>GB</p>
+                                <p class="expiry-date">Expiry date:<span>19-01-2023</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-div">
+                        <h3>
+                            <i class="fa fa-home"></i>
+                            WE TOPUP
+                        </h3>
+                        <div class="chart-div">
+                            <div class="usage-chart" id="chart2"></div>
+                            <div class="remaining-consumed-modal">
+                                <p>Remaining 0 GB</p>
+                                <p>Consumed<span>100</span>GB from<span>100</span>GB</p>
+                                <p class="expiry-date">Expiry date:<span>16-01-2023</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- outages -->
+        <div class="modal fade" id="outages" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">historical outage</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table datatable table-row-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>problem in</th>
+                                        <th>problem type</th>
+                                        <th>outage type</th>
+                                        <th>effect on</th>
+                                        <th>dslam</th>
+                                        <th>card</th>
+                                        <th>port</th>
+                                        <th>frame</th>
+                                        <th>from</th>
+                                        <th>to</th>
+                                        <th>planned from</th>
+                                        <th>planned to</th>
+                                        <th>comment</th>
+                                        <th>added by</th>
+                                        <th>added on</th>
+                                        <th>Current status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>754536</td>
+                                        <td>POP</td>
+                                        <td>down</td>
+                                        <td>
+                                            <div class="status disabled">
+                                                UnPlanned
+                                            </div>
+                                            <!-- <div class="status active">
+                                                        Planned
+                                                    </div> -->
+                                        </td>
+                                        <td>b</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>02-09-2019 05:58 PM</td>
+                                        <td>31-12-2100 02:00 AM</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>admin</td>
+                                        <td>31-12-2100 02:00 AM</td>
+                                        <td>historical</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22111</td>
+                                        <td>POP</td>
+                                        <td>unstable</td>
+                                        <td>
+                                            <div class="status active">
+                                                Planned
+                                            </div>
+                                            <!-- <div class="status disabled">
+                                                        UnPlanned
+                                                    </div> -->
+                                        </td>
+                                        <td>b</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>02-09-2019 05:58 PM</td>
+                                        <td>31-12-2100 02:00 AM</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>admin</td>
+                                        <td>31-12-2100 02:00 AM</td>
+                                        <td>historical</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!--begin::Javascript-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/plugins/apexcharts.min.js"></script>
@@ -1688,6 +1829,26 @@
             min: 0,
             max: 100,
             value: 68,
+            clockwise: false,
+            textFormat: 'percent',
+            animationDuration: 1000
+        });
+    </script>
+    <script>
+        new CircleProgress('#chart1', {
+            min: 0,
+            max: 100,
+            value: 82,
+            clockwise: false,
+            textFormat: 'percent',
+            animationDuration: 1000
+        });
+    </script>
+    <script>
+        new CircleProgress('#chart2', {
+            min: 0,
+            max: 100,
+            value: 0,
             clockwise: false,
             textFormat: 'percent',
             animationDuration: 1000
