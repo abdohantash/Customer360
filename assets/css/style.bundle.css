@@ -6498,7 +6498,7 @@ fieldset:disabled .btn {
   }
 
   .modal-sm {
-    --bs-modal-width: 300px;
+    --bs-modal-width: 325px;
   }
 }
 
@@ -59689,6 +59689,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 .usage-div .chart-div .remaining-consumed-modal .expiry-date span {
     color: currentColor;
     font-family: 'Roboto-Medium';
+}
+
+#captcha-modal {
+  margin-top: 0 !important;
 }
 
 /* responsive */

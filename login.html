@@ -45,16 +45,25 @@
 
     </div>
 
+
+    <div class="center-loader">
+        <div class="loader-circle-9">
+            Loading
+          <span></span>
+        </div>
+        <img src="assets/media/logo.svg" class="loader-dark" alt="">
+        <img src="assets/media/logo-light.svg" class="loader-light" alt="">
+    </div>
+
     <!--begin::Javascript-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
-    <script src="assets/plugins/apexcharts.min.js"></script>
-    <script src="assets/plugins/circle-progress.js"></script>
     <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
-    <script src="assets/js/scripts.bundle.js"></script>
-    <script src="assets/js/scripts-custom.js"></script>
     <script>
         var captcha = sliderCaptcha({
             id: 'captcha',
+            localImages: function () {
+            return 'assets/media/captcha/' + Math.round(Math.random() * 12) + '.jpg';
+            },
             onSuccess: function () {
             // do something
             }

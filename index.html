@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/logo.svg" />
     <link href="assets/plugins/datatable/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slidercaptcha/slidercaptcha.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/light-mode.css" rel="stylesheet" type="text/css" />
@@ -1817,13 +1818,45 @@
             </div>
         </div>
 
+            <!-- captcha-search -->
+    <div class="modal fade" id="captcha-search" data-bs-backdrop="static">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">confirm search</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="captcha-modal" class="captcha-div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--begin::Javascript-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/plugins/apexcharts.min.js"></script>
     <script src="assets/plugins/circle-progress.js"></script>
     <script src="assets/plugins/datatable/datatables.bundle.js"></script>
+    <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/js/scripts-custom.js"></script>
+    <script>
+         $(window).on('load', function() {
+        $('#captcha-search').modal('show');
+    });
+    </script>
+    <script>
+        var captcha = sliderCaptcha({
+            id: 'captcha-modal',
+            localImages: function () {
+            return 'assets/media/captcha/' + Math.round(Math.random() * 12) + '.jpg';
+            },
+            onSuccess: function () {
+            // do something
+            }
+        });
+    </script>
     <script>
         new CircleProgress('.loyalty-chart', {
             min: 0,
