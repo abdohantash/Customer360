@@ -75,7 +75,25 @@ $(document).on('click', '.agentbox ul li', function () {
 });
 
 // toggle light & dark mode
-$(document).on('click', '.toggle-mode', function () {
-    $('html').attr('data-theme',
-    $('html').attr('data-theme') == 'dark' ? 'light' : 'dark')
+$(document).ready(function(){
+    $('html').attr('data-theme','dark');
+    // Check local storage and set theme
+    if(localStorage.theme) {
+        $('html').attr('data-theme', localStorage.theme);
+    } 
+    else{
+        $('html').attr('data-theme','dark');
+    }
+    //Switch theme and store in local storage ...
+    $(document).on('click', '.toggle-mode', function () {
+         if ($('html').attr('data-theme') == 'dark'){
+            $('html').attr('data-theme','light');
+            localStorage.theme = 'light';
+         }
+         else  {
+            $('html').attr('data-theme','dark');
+            localStorage.theme = 'dark';
+         }
+       });
 });
+
