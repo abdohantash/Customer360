@@ -58431,9 +58431,44 @@ em {
 
 .loyalty-statistics {
   display: flex;
-  margin-top: 30px;
-  gap: 15px;
   align-items: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 20px;
+  background: #193580;
+}
+
+.loyalty-statistics h3 {
+
+  font-family: 'Roboto-bold';
+
+  font-weight: normal;
+
+  color: #EEF0F9;
+}
+
+.loyalty-statistics h4 {
+
+  font-family: 'Roboto-bold';
+
+  font-weight: normal;
+
+  color: #EEF0F9;
+}
+
+.loyalty-statistics span {}
+
+.loyalty-statistics p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #EEF0F9;
 }
 
 .loyalty-statistics .loyalty-chart {
@@ -59713,6 +59748,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   gap: 5px;
 }
 
+.popup-ul h3 {
+  font-weight: normal;
+}
+
 .popup-ul li {
   display: flex;
   gap: 15px;
@@ -59760,6 +59799,41 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
 .logout-btn i {
   font-size: 20px;
+}
+
+table p {
+  margin-bottom: 0;
+}
+
+.tabs-modal {
+  border: 0;
+  margin-bottom: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tabs-modal .nav-link {
+  background: #323e60;
+  border-radius: 4px;
+  min-width: 150px;
+  font-size: 17px;
+  color: #fff !important;
+  border: 0;
+  text-transform: capitalize;
+}
+
+.tabs-modal .nav-link.active {
+  background: #3454b2;
+}
+
+.flex-box-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffffff29;
+  padding-bottom: 20px;
+  gap: 30px;
 }
 
 /* responsive */
@@ -60084,11 +60158,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     margin-top: 15px;
   }
 
-  .points--dts{
-    margin: 0;
-    margin-top: 15px;
-  }
-
   .super-agent-btn,
   .btns-fixed-right .btn--fixed {
     padding: 2px 15px;
@@ -60161,7 +60230,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .box-card {
     margin-top: 30px;
-}
+  }
 }
 
 @media (max-width:800px) {
@@ -60362,7 +60431,13 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     padding: 0 30px;
     right: auto;
     left: 0;
-}
+  }
+
+  .loyalty-statistics {
+    width: 160px;
+    height: 160px;
+  }
+
 }
 
 @media (max-width:576px) {
@@ -60466,17 +60541,20 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .name-version {
     margin-top: 47px;
-}
-.box-card {
-  margin-top: 40px;
-}
-.usage-div .chart-div .usage-chart {
-  min-width: 80px;
-  width: 80px;
-}
-.usage-div .chart-div .remaining-consumed-modal p {
-  margin-bottom: 5px;
-}
+  }
+
+  .box-card {
+    margin-top: 40px;
+  }
+
+  .usage-div .chart-div .usage-chart {
+    min-width: 80px;
+    width: 80px;
+  }
+
+  .usage-div .chart-div .remaining-consumed-modal p {
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width:500px) {
@@ -60568,11 +60646,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .name-version {
     padding: 0 20px;
-}
+  }
 
-.logout-btn {
-  margin-right: 10px;
-}
+  .logout-btn {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width:450px) {
@@ -60645,6 +60723,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .box-card {
     margin-top: 0;
-}
+  }
 
 }
