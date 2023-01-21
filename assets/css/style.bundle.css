@@ -58070,6 +58070,7 @@ body:not(.bg-body) {
   width: 100%;
   align-items: center;
   gap: 5px;
+  position: relative;
 }
 
 .box-card {
@@ -59754,6 +59755,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .logout-btn i {
@@ -59763,6 +59765,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 /* responsive */
 
 @media (max-width:1300px) {
+  .bottom-part {
+    gap: 30px;
+  }
+
   .bottom-part li {
     min-width: unset;
   }
@@ -59785,6 +59791,23 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .flex-cards .port {
     min-width: 240px;
     width: 240px;
+  }
+
+  .name-version {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  .toggle-mode {
+    margin-left: auto;
+  }
+
+  .name-version span {
+    padding: 6px;
+    border-radius: 3px;
   }
 }
 
@@ -59820,11 +59843,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     font-size: 18px;
   }
 
-  .links-header {
-    gap: 25px;
-    margin: 0 50px;
-  }
-
   .dts-box .info-ul {
     display: grid;
     gap: 25px;
@@ -59839,10 +59857,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
   .form-switch.form-check-solid .form-check-input {
     height: 20px;
-  }
-
-  .private-dts {
-    gap: 0;
   }
 
   .certificate,
@@ -59916,12 +59930,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     width: 130px;
   }
 
-  .topbar {
-    gap: 20px;
-  }
-
   .links-header {
-    gap: 20px;
     margin: 0 30px;
   }
 
@@ -60075,15 +60084,15 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     margin-top: 15px;
   }
 
+  .points--dts{
+    margin: 0;
+    margin-top: 15px;
+  }
+
   .super-agent-btn,
   .btns-fixed-right .btn--fixed {
     padding: 2px 15px;
     font-size: 14px;
-  }
-
-  .private-dts {
-    gap: 12px;
-    flex-wrap: wrap;
   }
 
   .certificate-ul li input,
@@ -60149,6 +60158,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .header-login h2 {
     font-size: 19px;
   }
+
+  .box-card {
+    margin-top: 30px;
+}
 }
 
 @media (max-width:800px) {
@@ -60339,6 +60352,17 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .address-ul li input {
     width: auto;
   }
+
+  .topbar {
+    position: unset;
+  }
+
+  .name-version {
+    margin-top: 50px;
+    padding: 0 30px;
+    right: auto;
+    left: 0;
+}
 }
 
 @media (max-width:576px) {
@@ -60439,6 +60463,20 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .part-info .title-part {
     margin-bottom: 25px;
   }
+
+  .name-version {
+    margin-top: 47px;
+}
+.box-card {
+  margin-top: 40px;
+}
+.usage-div .chart-div .usage-chart {
+  min-width: 80px;
+  width: 80px;
+}
+.usage-div .chart-div .remaining-consumed-modal p {
+  margin-bottom: 5px;
+}
 }
 
 @media (max-width:500px) {
@@ -60475,10 +60513,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
     margin-top: 15px;
   }
 
-  .links-header {
-    display: none;
-  }
-
   .container,
   .container-xxl,
   .container-fluid,
@@ -60494,8 +60528,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   }
 
   .search-head {
-    padding: 8px 20px;
-    padding-top: 0;
+    padding: 0 30px 8px 20px;
   }
 
   .not-found {
@@ -60532,6 +60565,14 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .card-login .btn-login {
     padding: 10px 15px;
   }
+
+  .name-version {
+    padding: 0 20px;
+}
+
+.logout-btn {
+  margin-right: 10px;
+}
 }
 
 @media (max-width:450px) {
@@ -60597,5 +60638,13 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   .super-agent .agentbox ul li {
     font-size: 14px;
   }
+
+  .name-version {
+    display: none;
+  }
+
+  .box-card {
+    margin-top: 0;
+}
 
 }
