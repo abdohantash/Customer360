@@ -27,8 +27,9 @@
     color:#702283 !important;
 }
 
-[data-theme=light] .links-header a {
-    color: #EEF0F9;
+[data-theme=light] .links-header a,
+[data-theme=light] .name-version span {
+    color: #fefcff;
 }
 
 [data-theme=light] .header,
@@ -53,14 +54,12 @@
 
 [data-theme=light] .bottom-part li p,
 [data-theme=light] .dates li p,
-[data-theme=light] .name-numbers .form-select,
-[data-theme=light] .title-card,
 [data-theme=light] .top-part li p,
 [data-theme=light] .port-ul li p,
-[data-theme=light] .certificate-ul li p,
-[data-theme=light] .phone-ul li p,
-[data-theme=light] .certificate-ul li input,
-[data-theme=light] .phone-ul li input,
+[data-theme=light] .private-dts li p,
+[data-theme=light] .private-dts li input,
+[data-theme=light] .name-numbers .form-select,
+[data-theme=light] .title-card,
 [data-theme=light] .dts-box .info-ul li span,
 [data-theme=light] .footer span,
 [data-theme=light] .consumed p span,
@@ -69,7 +68,9 @@
 [data-theme=light] .dts-box .port-ul li p,
 [data-theme=light] div.dataTables_wrapper div.dataTables_filter label,
 [data-theme=light] div.dataTables_wrapper div.dataTables_length label,
-[data-theme=light] .table th {
+[data-theme=light] .table th,
+[data-theme=light] .usage-div .chart-div .remaining-consumed-modal p,
+[data-theme=light] .popup-ul li span {
     color: #161d31;
 }
 
@@ -158,8 +159,8 @@
 }
 
 [data-theme=light] .flex-cards .loyalty {
-    background: #962071;
-    background: transparent linear-gradient(180deg, #b83a90 0%, #541563 100%);
+    background: #702283;
+    background: transparent linear-gradient(180deg, #9945ad 0%, #561d63 100%);
 }
 
 [data-theme=light] .loyalty-statistics .remaining-consumed li .consumed-points em {
@@ -167,12 +168,34 @@
 }
 
 [data-theme=light] .loyalty-chart .circle-progress-value,
-[data-theme=light] .apexcharts-series.apexcharts-radial-series path {
-    stroke: #de34a9;
+[data-theme=light] .apexcharts-series.apexcharts-radial-series path,
+[data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-value {
+    stroke: #702283;
 }
 
-[data-theme=light] .apexcharts-radialbar-track.apexcharts-track path {
+[data-theme=light] .apexcharts-radialbar-track.apexcharts-track path,
+[data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-circle {
     stroke: #d2d6e5;
+}
+
+[data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-text {
+    fill: #702283;
+}
+
+[data-theme=light] .usage-div .chart-div .remaining-consumed-modal p span {
+    color: #8d2ca5;
+}
+
+[data-theme=light] .usage-div .chart-div .remaining-consumed-modal .expiry-date span {
+    color: #874e95;
+}
+
+[data-theme=light] .usage-div {
+    border-bottom: 1px solid #00000017;
+}
+
+[data-theme=light] .usage-div:last-child {
+    border-bottom: 0;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link.active span {
@@ -218,8 +241,7 @@
     background-color: #702283;
 }
 
-[data-theme=light] .certificate-ul li p img,
-[data-theme=light] .phone-ul li p img {
+[data-theme=light] .private-dts li p img {
     filter: brightness(0.5);
 }
 
@@ -236,9 +258,15 @@
     color: #702282 !important;
 }
 
-[data-theme=light] .port .restart--port {
-    border: 1px solid #962071;
-    background: #962071;
+[data-theme=light] .port .restart--port,
+[data-theme=light] .check--dts {
+    border: 1px solid #702283;
+    background: #702283;
+}
+
+[data-theme=light] .points--dts {
+    border: 1px solid #8c2ca3;
+    background: #8c2ca3;
 }
 
 [data-theme=light] .loader-spin {
@@ -297,11 +325,67 @@
 }
 
 [data-theme=light] .super-agent .agentbox ul li.active {
-    background: #962071;
-    background: linear-gradient(to right, #962071, #812b66);
+    background: #702283;
+    background: linear-gradient(to right, #702283, #5e1b6e);
     color: #fff;
 }
 
 [data-theme=light] .super-agent .scroll-menu::-webkit-scrollbar-thumb {
 background-color: #702283;
+}
+
+[data-theme=light] .outage .have-outage {
+    background: #29A32C;
+    background: linear-gradient(to bottom, #38bc3b, #268329);
+}
+
+[data-theme=light] .outage em {
+    box-shadow: rgb(0 0 0 / 4%) 1.95px 1.95px 2.6px;
+}
+
+[data-theme=light] .outage .no-outage {
+    background: #FF3226;
+    background: linear-gradient(to bottom, #f3473d, #98322c);
+}
+
+[data-theme=light] .private-dts {
+    border-top: 1px solid #66666629;
+}
+
+[data-theme=light] .table tr.active {
+    background: #e0cbe5 !important;
+}
+
+[data-theme=light] .page-link.active,
+[data-theme=light] .active>.page-link {
+    background: #813892;
+}
+
+[data-theme=light] .loyalty-statistics {
+    background: #763086;
+}
+
+[data-theme=light] .dts-billing .port-ul {
+    background: #eceef7;
+    background: linear-gradient(to right, #eceef7, #ffffff);
+}
+
+[data-theme=light] .modal-content {
+    background: #fff;
+}
+
+[data-theme=light] .tabs-modal .nav-link {
+    background: #e7e1e9;
+    color: #702283 !important;
+    transition: unset;
+}
+
+[data-theme=light] .tabs-modal .nav-link.active {
+    background: #702283;
+    color: #fff !important;
+}
+
+[data-theme=light] .popup-ul li p {
+    background: #702283;
+    color: #fefcff;
 }

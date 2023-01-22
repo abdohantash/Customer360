@@ -58147,7 +58147,8 @@ em {
 
 .top-part {
   display: flex;
-  gap: 55px;
+  gap: 35px;
+  flex-wrap: wrap;
 }
 
 .top-part li {
@@ -58185,9 +58186,10 @@ em {
 
 .bottom-part {
   display: flex;
-  gap: 55px;
+  gap: 20px;
   margin-top: 25px;
   align-items: start;
+  justify-content: space-between;
 }
 
 .bottom-part li {
@@ -58198,8 +58200,8 @@ em {
   align-items: start;
   justify-content: space-between;
   gap: 25px;
-  min-width: 300px;
   position: relative;
+  width: 100%;
 }
 
 .bottom-part li img {
@@ -58248,6 +58250,7 @@ em {
   min-width: unset;
   padding: 0;
   padding-top: 10px;
+  margin-right: 30px;
 }
 
 .refresh {
@@ -58372,7 +58375,7 @@ em {
 .port-ul li {
   display: flex;
   gap: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 }
 
 .port-ul li span {
@@ -58443,31 +58446,24 @@ em {
 }
 
 .loyalty-statistics h3 {
-
   font-family: 'Roboto-bold';
-
   font-weight: normal;
-
   color: #EEF0F9;
 }
 
 .loyalty-statistics h4 {
-
   font-family: 'Roboto-bold';
-
   font-weight: normal;
-
   color: #EEF0F9;
 }
 
-.loyalty-statistics span {}
+.loyalty-statistics span {
+  color: #EEF0F9;
+}
 
 .loyalty-statistics p {
-
   margin: 0;
-
   font-size: 14px;
-
   color: #EEF0F9;
 }
 
@@ -58952,7 +58948,7 @@ em {
 }
 
 .table tr.active {
-  background: #ffffff30 !important;
+  background: #4f5a7b !important;
   position: relative;
 }
 
@@ -59829,11 +59825,10 @@ table p {
 
 .flex-box-div {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
   border-bottom: 1px solid #ffffff29;
   padding-bottom: 20px;
-  gap: 30px;
+  gap: 65px;
 }
 
 /* responsive */
@@ -59979,7 +59974,7 @@ table p {
   }
 
   .bottom-part li img {
-    max-height: 22px;
+    max-height: 24px;
   }
 
   .top-part {
