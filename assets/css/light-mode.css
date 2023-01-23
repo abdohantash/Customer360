@@ -1,11 +1,13 @@
 [data-theme=light] body,
-[data-theme=light] .links-header a.active::after{
+[data-theme=light] .links-header a.active::after {
     background: #ECEEF7;
 }
+
 [data-theme=light] .logo-header,
 [data-theme=light] .loader-dark {
     display: none;
 }
+
 [data-theme=light] .logo-light,
 [data-theme=light] .loader-light {
     display: block;
@@ -19,12 +21,12 @@
     color: #de34a9;
 }
 
-[data-theme=light] a:hover{
-    color:#702283;
+[data-theme=light] a:hover {
+    color: #702283;
 }
 
 [data-theme=light] .menu-item .menu-link:hover {
-    color:#702283 !important;
+    color: #702283 !important;
 }
 
 [data-theme=light] .links-header a,
@@ -71,7 +73,7 @@
 [data-theme=light] .table th,
 [data-theme=light] .usage-div .chart-div .remaining-consumed-modal p,
 [data-theme=light] .popup-ul li span {
-    color: #161d31;
+    color: #111;
 }
 
 [data-theme=light] .dts-box .info-ul li p,
@@ -82,7 +84,7 @@
 [data-theme=light] .port-ul li span,
 [data-theme=light] .dts-box .port-ul li span,
 [data-theme=light] div.dataTables_wrapper div.dataTables_info {
-    color: #555c71;
+    color: #111;
 }
 
 [data-theme=light] .dts-box .client-name,
@@ -269,10 +271,6 @@
     background: #8c2ca3;
 }
 
-[data-theme=light] .loader-spin {
-    backdrop-filter: unset;
-}
-
 [data-theme=light] .loader-spin .double-bounce1,
 [data-theme=light] .loader-spin .double-bounce2 {
     background: #b77ac6;
@@ -311,7 +309,7 @@
     color: #626d8b;
 }
 
-[data-theme=light] .super-agent .head-menu .svg-icon{
+[data-theme=light] .super-agent .head-menu .svg-icon {
     color: #161d31 !important;
 }
 
@@ -331,7 +329,7 @@
 }
 
 [data-theme=light] .super-agent .scroll-menu::-webkit-scrollbar-thumb {
-background-color: #702283;
+    background-color: #702283;
 }
 
 [data-theme=light] .outage .have-outage {
@@ -386,6 +384,19 @@ background-color: #702283;
 }
 
 [data-theme=light] .popup-ul li p {
-    background: #702283;
+    background: #7d84a0;
     color: #fefcff;
+}
+
+[data-theme=light] .popup-ul li span {
+    background: #eceef7;
+    background: linear-gradient(to left, #eceef7, #ffffff00);
+}
+
+[data-theme=light] .title-part img {
+    filter: hue-rotate(78deg);
+}
+
+[data-theme=light] .tabs-style-shape::-webkit-scrollbar-thumb {
+    background-color: #c4c9de !important;
 }
