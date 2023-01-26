@@ -45,7 +45,7 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    background-color: #ffffff14;
+    background-color: #321d46;
     height: 40px;
 }
 
@@ -94,7 +94,7 @@ body {
     left: 0;
     top: 0;
     height: 40px;
-    background: #24366b;
+    background: #3d1f5b;
 }
 
 .sliderMask .slider {
@@ -103,7 +103,7 @@ body {
     left: 0;
     width: 40px;
     height: 100%;
-    background: #425383;
+    background: #613492;
     cursor: pointer;
     transition: background .2s linear;
     display: flex;
@@ -113,7 +113,7 @@ body {
 }
 
 .sliderMask .slider:hover {
-    background: #1991FA;
+    background: #5b2892;
 }
 
 .slider .sliderIcon {
@@ -139,7 +139,7 @@ body {
     z-index: 5;
     transition: color .3s linear;
     color: #fff !important;
-    background: #6f7890;
+    background: #613492;
     width: 22px;
     height: 22px;
     text-align: center;

@@ -340,8 +340,8 @@ div.dataTables_wrapper div.dataTables_length select {
   display: inline-block;
   width: auto;
   border-radius: 4px;
-  background-color: #444b5e;
-  border-color: #444b5e;
+  background-color: #1d0c2e;
+  border-color: #1d0c2e;
   color: #fff;
   font-size: 14px;
   padding-top: 3px;
@@ -364,8 +364,8 @@ div.dataTables_wrapper div.dataTables_filter input {
   display: inline-block;
   width: auto;
   border-radius: 4px;
-  background: #444b5e;
-  border-color: #444b5e;
+  background: #1d0c2e;
+  border-color: #1d0c2e;
   color: #fff;
   font-size: 15px;
   padding-top: 4px;
