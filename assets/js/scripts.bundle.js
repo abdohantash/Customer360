@@ -7570,25 +7570,3 @@ var KTLayoutSearch = function() {
 KTUtil.onDOMContentLoaded(function() {
     KTLayoutSearch.init();
 });
-"use strict";
-
-
-// Initialize app on document ready
-KTUtil.onDOMContentLoaded(function () {
-    KTThemeModeUser.init();
-});
-
-// Declare KTThemeModeUser for Webpack support
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = KTThemeModeUser;
-}
-
-// Initialize app on document ready
-KTUtil.onDOMContentLoaded(function () {
-    KTThemeMode.init();
-});
-
-// Declare KTThemeMode for Webpack support
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = KTThemeMode;
-}
