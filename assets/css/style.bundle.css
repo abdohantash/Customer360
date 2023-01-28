@@ -58079,7 +58079,7 @@ em {
 .status {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-size: 16px;
 }
 
@@ -58261,7 +58261,11 @@ em {
 
 .flex-cards {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+}
+
+.flex-cards .card {
+  margin: 0;
 }
 
 
@@ -58271,32 +58275,32 @@ em {
 }
 
 .flex-cards .loyalty {
-  min-width: 245px;
-  width: 245px;
+  min-width: 215px;
+  width: 215px;
   background: #aa20a6;
   background: transparent linear-gradient(180deg, #9945ad 0%, #561d63 100%);
 }
 
 .flex-cards .port {
-  min-width: 245px;
-  width: 245px;
+  min-width: 270px;
+  width: 270px;
 }
 
 .flex-cards .consumption {
-  min-width: 245px;
-  width: 245px;
+  min-width: 225px;
+  width: 225px;
 }
 
 
 .title-card {
   color: #EEF0F9;
   font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
 }
 
 .consumed {
-  width: 255px;
-  min-width: 255px;
+  width: 230px;
+  min-width: 230px;
   min-height: 190px;
 }
 
@@ -58335,7 +58339,7 @@ em {
 
 .management-consumed {
   display: flex;
-  gap: 5px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -58378,9 +58382,10 @@ em {
 
 .port-ul li {
   display: flex;
-  gap: 8px;
-  margin-bottom: 18px;
+  gap: 7px;
+  margin-bottom: 17px;
   font-size: 14px;
+  align-items: center;
 }
 
 .port-ul li span {
@@ -58417,7 +58422,7 @@ em {
   margin: 0 auto;
   display: block;
   border-radius: 3px;
-  margin-top: 15px;
+  margin-top: 21px;
 }
 
 .total-points {
@@ -58565,7 +58570,7 @@ em {
 }
 
 .tabs-style-shape {
-  margin-top: 20px;
+  margin-top: 30px;
   border: 0;
   padding: 0 50px;
   flex-wrap: nowrap;
@@ -59454,8 +59459,6 @@ body::-webkit-scrollbar {
 .loader-circle-9:before {
   content: '';
   position: absolute;
-  top: -3px;
-  left: -3px;
   width: 80px;
   height: 80px;
   border: 3px solid transparent;
@@ -59628,7 +59631,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   margin: 0 auto;
   display: block;
   border-radius: 3px;
-  margin-top: 15px;
+  margin-top: 17px;
   text-transform: capitalize;
 }
 
@@ -59640,7 +59643,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   margin: 0 auto;
   display: block;
   border-radius: 3px;
-  margin-top: 15px;
+  margin-top: 20px;
   text-transform: capitalize;
 }
 
@@ -59887,13 +59890,13 @@ table p {
 
 .consumption-list p span {
   color: #BCBCCB;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .consumption-list .list--scroll {
-    max-height: 194px;
-    overflow: auto;
-    padding-right: 15px;
+  max-height: 196px;
+  overflow: auto;
+  padding-right: 15px;
 }
 
 .consumption-list .list--scroll li {
@@ -59917,6 +59920,25 @@ table p {
   font-size: 14px;
 }
 
+.no-consumption {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.no-consumption img {
+  margin-bottom: 20px;
+}
+
+.no-consumption h3 {
+  color: #EEF0F9;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
 
 /* responsive */
 
@@ -59934,19 +59956,13 @@ table p {
   }
 
   .consumed {
-    width: 250px;
-    min-width: 250px;
+    width: 220px;
+    min-width: 220px;
   }
 
   .loyalty-statistics .loyalty-chart {
     min-width: 95px;
     width: 95px;
-  }
-
-  .flex-cards .loyalty,
-  .flex-cards .port {
-    min-width: 240px;
-    width: 240px;
   }
 
   .name-version {
@@ -59964,6 +59980,7 @@ table p {
   .name-version span {
     padding: 6px;
     border-radius: 3px;
+    background: #2e1b41;
   }
 }
 
@@ -59975,11 +59992,6 @@ table p {
 
   .dates li p {
     font-size: 16px;
-    margin-top: 0px;
-  }
-
-  .management-consumed {
-    align-items: start;
   }
 
   .tabs-style-shape li .nav-link span {
@@ -60036,6 +60048,36 @@ table p {
   .card-login .card-body {
     width: 80%;
   }
+
+  .flex-cards {
+    flex-wrap: wrap;
+  }
+
+  .flex-cards .management {
+    width: calc(100% - 240px);
+    order: 1;
+  }
+
+  .flex-cards .consumption {
+    order: 2;
+  }
+
+  .flex-cards .port {
+    width: calc(100% - 240px);
+    order: 3;
+  }
+
+  .port .restart--port {
+    margin: 0;
+    margin-top: 21px;
+}
+
+.flex-cards .loyalty {
+  order: 4;
+  min-width: 225px;
+  width: 225px;
+}
+
 }
 
 
@@ -60112,23 +60154,12 @@ table p {
     white-space: nowrap;
   }
 
-  .consumed {
-    width: 220px;
-    min-width: 220px;
-  }
-
   .consumed h4 {
     font-size: 15px;
   }
 
-  .flex-cards .loyalty,
-  .flex-cards .port {
-    min-width: 230px;
-    width: 230px;
-  }
-
-  .flex-cards {
-    gap: 12px;
+  .management-consumed {
+    gap: 20px;
   }
 }
 
@@ -60139,7 +60170,7 @@ table p {
   }
 
   .tabs-style-shape {
-    margin-top: 10px;
+    margin-top: 20px;
     gap: 35px;
     padding: 0 40px;
   }
@@ -60209,36 +60240,6 @@ table p {
 
   .flex-cards {
     flex-wrap: wrap;
-    row-gap: 0;
-  }
-
-  .management-consumed {
-    gap: 30px;
-  }
-
-  .flex-cards .management {
-    width: calc(100% - 242px);
-  }
-
-  .flex-cards .port {
-    width: 100%;
-  }
-
-  .port-ul {
-    margin-top: 15px;
-    display: flex;
-    gap: 40px;
-    row-gap: 5px;
-    flex-wrap: wrap;
-  }
-
-  .port-ul li {
-    margin-bottom: 0;
-  }
-
-  .port .restart--port {
-    margin: 0;
-    margin-top: 15px;
   }
 
   .super-agent-btn,
@@ -60264,7 +60265,7 @@ table p {
   .top-part {
     gap: 30px;
     row-gap: 10px;
-    flex-wrap: wrap;
+    justify-content: start;    
   }
 
   .dts-box {
@@ -60400,7 +60401,7 @@ table p {
     top: 100%;
     padding: 8px 30px;
     padding-top: 0;
-    background: #262d40;
+    background: #2e1b41;
     right: 0;
   }
 
@@ -60418,12 +60419,15 @@ table p {
 
   .flex-cards .management {
     width: 100%;
+    order: unset;
   }
 
+  .flex-cards .consumption,
   .flex-cards .loyalty,
   .flex-cards .port {
+    width: calc(50% - 9px);
+    order: unset;
     min-width: unset;
-    width: calc(50% - 6px) !important;
   }
 
   .certificate-ul li p img,
@@ -60437,17 +60441,6 @@ table p {
 
   .loyalty-chart .circle-progress-text {
     font-size: 22px;
-  }
-
-  .port-ul {
-    margin-top: 15px;
-    display: block;
-    row-gap: 5px;
-    flex-wrap: nowrap;
-  }
-
-  .port-ul li {
-    margin-bottom: 9px;
   }
 
   .bottom-part li,
@@ -60514,11 +60507,6 @@ table p {
     padding: 0 30px;
     right: auto;
     left: 0;
-  }
-
-  .loyalty-statistics {
-    width: 160px;
-    height: 160px;
   }
 }
 
@@ -60636,6 +60624,27 @@ table p {
 
   .usage-div .chart-div .remaining-consumed-modal p {
     margin-bottom: 5px;
+  }
+
+  .flex-cards .consumption, .flex-cards .loyalty, .flex-cards .port {
+    width: 100%;
+  }
+
+  .port-ul {
+    margin-top: 15px;
+    display: flex;
+    gap: 40px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .port-ul li {
+    margin-bottom: 0;
+  }
+
+  .port .restart--port {
+    margin: 0;
+    margin-top: 15px;
   }
 }
 
@@ -60810,28 +60819,28 @@ table p {
 
 [data-theme=light] body,
 [data-theme=light] .links-header a.active::after {
-    background: #ECEEF7;
+  background: #ECEEF7;
 }
 
 [data-theme=light] body::-webkit-scrollbar-thumb {
-    background-color: #702283;
+  background-color: #702283;
 }
 
 [data-theme=light] a {
-    color: #de34a9;
+  color: #de34a9;
 }
 
 [data-theme=light] a:hover {
-    color: #702283;
+  color: #702283;
 }
 
 [data-theme=light] .menu-item .menu-link:hover {
-    color: #702283 !important;
+  color: #702283 !important;
 }
 
 [data-theme=light] .links-header a,
 [data-theme=light] .name-version span {
-    color: #fefcff;
+  color: #fefcff;
 }
 
 [data-theme=light] .header,
@@ -60840,7 +60849,7 @@ table p {
 [data-theme=light] .scrolltop,
 [data-theme=light] .scrolltop:hover,
 [data-theme=light] .search-head {
-    background: #702283;
+  background: #702283;
 }
 
 [data-theme=light] .user--profile span,
@@ -60851,7 +60860,7 @@ table p {
 [data-theme=light] .links-header a:hover,
 [data-theme=light] .total-points span,
 [data-theme=light] .loyalty-statistics .remaining-consumed li h6 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 [data-theme=light] .bottom-part li p,
@@ -60882,312 +60891,312 @@ table p {
 [data-theme=light] .port-ul li span,
 [data-theme=light] .dts-box .port-ul li span,
 [data-theme=light] div.dataTables_wrapper div.dataTables_info {
-    color: #111;
+  color: #111;
 }
 
 [data-theme=light] .dts-box .client-name,
 [data-theme=light] .top-part li p em,
 [data-theme=light] .title-part,
 [data-theme=light] .super-agent .title-menu {
-    color: #702283;
+  color: #702283;
 }
 
 [data-theme=light] .name-numbers .form-select {
-    border-color: #d7d7dd;
+  border-color: #d7d7dd;
 }
 
 [data-theme=light] div.dataTables_wrapper div.dataTables_filter input {
-    background: #ffffff;
-    border-color: #B5B5C3;
-    color: #161d31;
+  background: #ffffff;
+  border-color: #B5B5C3;
+  color: #161d31;
 }
 
 [data-theme=light] div.dataTables_wrapper div.dataTables_filter input:focus {
-    background: #70228208;
-    border-color: #B5B5C3;
-    color: #161d31;
+  background: #70228208;
+  border-color: #B5B5C3;
+  color: #161d31;
 }
 
 [data-theme=light] div.dataTables_wrapper div.dataTables_length select {
-    background-color: #ffffff;
-    border-color: #B5B5C3;
-    color: #161d31;
+  background-color: #ffffff;
+  border-color: #B5B5C3;
+  color: #161d31;
 }
 
 [data-theme=light] div.dataTables_wrapper div.dataTables_length select:focus {
-    background-color: #70228208 !important;
-    border-color: #B5B5C3 !important;
-    color: #161d31 !important;
+  background-color: #70228208 !important;
+  border-color: #B5B5C3 !important;
+  color: #161d31 !important;
 }
 
 [data-theme=light] .table {
-    background: #eceef7;
-    background: linear-gradient(to bottom, #eceef7, #ffffff);
+  background: #eceef7;
+  background: linear-gradient(to bottom, #eceef7, #ffffff);
 }
 
 [data-theme=light] .table tbody tr {
-    background-color: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 [data-theme=light] .table-responsive::-webkit-scrollbar-thumb {
-    background-color: #c4c9de !important;
+  background-color: #c4c9de !important;
 }
 
 [data-theme=light] .bottom-part li {
-    background: #eceef7;
-    background: linear-gradient(to bottom, #eceef7, #ffffff);
+  background: #eceef7;
+  background: linear-gradient(to bottom, #eceef7, #ffffff);
 }
 
 [data-theme=light] .bottom-part li.balance {
-    background: unset;
+  background: unset;
 }
 
 [data-theme=light] .dates li {
-    background: #eceef7;
+  background: #eceef7;
 }
 
 [data-theme=light] .bottom-part li h3 {
-    background: transparent linear-gradient(180deg, #702283 0%, #ba3dd8 100%) 0% 0% no-repeat padding-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  background: transparent linear-gradient(180deg, #702283 0%, #ba3dd8 100%) 0% 0% no-repeat padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 [data-theme=light] .consumed p em {
-    color: #9d9db0;
+  color: #9d9db0;
 }
 
 [data-theme=light] .flex-cards .loyalty {
-    background: #702283;
-    background: transparent linear-gradient(180deg, #9945ad 0%, #561d63 100%);
+  background: #702283;
+  background: transparent linear-gradient(180deg, #9945ad 0%, #561d63 100%);
 }
 
 [data-theme=light] .loyalty-statistics .remaining-consumed li .consumed-points em {
-    background: #de34a9;
+  background: #de34a9;
 }
 
 [data-theme=light] .loyalty-chart .circle-progress-value,
 [data-theme=light] .apexcharts-series.apexcharts-radial-series path,
 [data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-value {
-    stroke: #702283;
+  stroke: #702283;
 }
 
 [data-theme=light] .apexcharts-radialbar-track.apexcharts-track path,
 [data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-circle {
-    stroke: #d2d6e5;
+  stroke: #d2d6e5;
 }
 
 [data-theme=light] .usage-div .chart-div .usage-chart .circle-progress-text {
-    fill: #702283;
+  fill: #702283;
 }
 
 [data-theme=light] .usage-div .chart-div .remaining-consumed-modal p span {
-    color: #8d2ca5;
+  color: #8d2ca5;
 }
 
 [data-theme=light] .usage-div .chart-div .remaining-consumed-modal .expiry-date span {
-    color: #874e95;
+  color: #874e95;
 }
 
 [data-theme=light] .usage-div {
-    border-bottom: 1px solid #00000017;
+  border-bottom: 1px solid #00000017;
 }
 
 [data-theme=light] .usage-div:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link.active span {
-    background: #ffffff !important;
-    color: #702283;
+  background: #ffffff !important;
+  color: #702283;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link.active svg {
-    fill: #ffffff !important;
+  fill: #ffffff !important;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link.active span::after {
-    background: #70228269;
+  background: #70228269;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link span {
-    background-color: #823893;
-    color: #EEF0F9;
+  background-color: #823893;
+  color: #EEF0F9;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link svg {
-    fill: #823893;
+  fill: #823893;
 }
 
 
 [data-theme=light] .tabs-style-shape li .nav-link:hover span {
-    background-color: #651d76;
+  background-color: #651d76;
 }
 
 [data-theme=light] .tabs-style-shape li .nav-link:hover svg {
-    fill: #651d76;
+  fill: #651d76;
 }
 
 [data-theme=light] .form-check-custom.form-check-solid .form-check-input,
 [data-theme=light] .form-check-custom.form-check-solid .form-check-input:focus {
-    background-color: #d3d7e8;
+  background-color: #d3d7e8;
 }
 
 [data-theme=light] .form-check-custom.form-check-solid .form-check-input:checked {
-    background-color: #702283;
+  background-color: #702283;
 }
 
 [data-theme=light] .private-dts li p img {
-    filter: brightness(0.5);
+  filter: brightness(0.5);
 }
 
 [data-theme=light] .part-info {
-    background: #eceef7;
-    background: linear-gradient(to bottom, #eceef7, #ffffff);
+  background: #eceef7;
+  background: linear-gradient(to bottom, #eceef7, #ffffff);
 }
 
 [data-theme=light] .part-info .title-part::after {
-    background: #7022833d;
+  background: #7022833d;
 }
 
 [data-theme=light] .text-blue {
-    color: #702282 !important;
+  color: #702282 !important;
 }
 
 [data-theme=light] .port .restart--port,
 [data-theme=light] .check--dts {
-    border: 1px solid #702283;
-    background: #702283;
+  border: 1px solid #702283;
+  background: #702283;
 }
 
 [data-theme=light] .points--dts {
-    border: 1px solid #8c2ca3;
-    background: #8c2ca3;
+  border: 1px solid #8c2ca3;
+  background: #8c2ca3;
 }
 
 [data-theme=light] .loader-spin .double-bounce1,
 [data-theme=light] .loader-spin .double-bounce2 {
-    background: #b77ac6;
+  background: #b77ac6;
 }
 
 [data-theme=light] .not-found img {
-    filter: brightness(.4);
+  filter: brightness(.4);
 }
 
 [data-theme=light] .loader-circle-9 {
-    border: 3px solid #eef0f9;
-    color: #ffffff;
+  border: 3px solid #eef0f9;
+  color: #ffffff;
 }
 
 [data-theme=light] .loader-circle-9:before {
-    border-top: 3px solid #e30d9f;
-    border-right: 3px solid #e30d9f;
+  border-top: 3px solid #e30d9f;
+  border-right: 3px solid #e30d9f;
 }
 
 [data-theme=light] .loader-circle-9 span:before {
-    background: #e30d9f;
-    box-shadow: 0 0 20px #e30d9f;
+  background: #e30d9f;
+  box-shadow: 0 0 20px #e30d9f;
 }
 
 [data-theme=light] .super-agent {
-    background: #ffffff;
+  background: #ffffff;
 }
 
 [data-theme=light] .super-agent .search-input {
-    background-color: #ffffff !important;
-    border-color: #d1d1d1 !important;
-    color: #161d31;
+  background-color: #ffffff !important;
+  border-color: #d1d1d1 !important;
+  color: #161d31;
 }
 
 [data-theme=light] .super-agent .search-input::placeholder {
-    color: #626d8b;
+  color: #626d8b;
 }
 
 [data-theme=light] .super-agent .head-menu .svg-icon {
-    color: #161d31 !important;
+  color: #161d31 !important;
 }
 
 [data-theme=light] .super-agent .agentbox h4 span {
-    background: #7f399030;
+  background: #7f399030;
 }
 
 [data-theme=light] .super-agent .agentbox ul li {
-    background: #eceef7;
-    background: linear-gradient(to right, #eceef7, #ffffff);
+  background: #eceef7;
+  background: linear-gradient(to right, #eceef7, #ffffff);
 }
 
 [data-theme=light] .super-agent .agentbox ul li.active {
-    background: #702283;
-    background: linear-gradient(to right, #702283, #5e1b6e);
-    color: #fff;
+  background: #702283;
+  background: linear-gradient(to right, #702283, #5e1b6e);
+  color: #fff;
 }
 
 [data-theme=light] .super-agent .scroll-menu::-webkit-scrollbar-thumb {
-    background-color: #702283;
+  background-color: #702283;
 }
 
 [data-theme=light] .outage .have-outage {
-    background: #29A32C;
-    background: linear-gradient(to bottom, #38bc3b, #268329);
+  background: #29A32C;
+  background: linear-gradient(to bottom, #38bc3b, #268329);
 }
 
 [data-theme=light] .outage em {
-    box-shadow: rgb(0 0 0 / 4%) 1.95px 1.95px 2.6px;
+  box-shadow: rgb(0 0 0 / 4%) 1.95px 1.95px 2.6px;
 }
 
 [data-theme=light] .outage .no-outage {
-    background: #FF3226;
-    background: linear-gradient(to bottom, #f3473d, #98322c);
+  background: #FF3226;
+  background: linear-gradient(to bottom, #f3473d, #98322c);
 }
 
 [data-theme=light] .private-dts {
-    border-top: 1px solid #66666629;
+  border-top: 1px solid #66666629;
 }
 
 [data-theme=light] .table tr.active {
-    background: #e0cbe5 !important;
+  background: #e0cbe5 !important;
 }
 
 [data-theme=light] .page-link.active,
 [data-theme=light] .active>.page-link {
-    background: #813892;
+  background: #813892;
 }
 
 [data-theme=light] .loyalty-statistics {
-    background: #763086;
+  background: #763086;
 }
 
 [data-theme=light] .dts-billing .port-ul {
-    background: #eceef7;
-    background: linear-gradient(to right, #eceef7, #ffffff);
+  background: #eceef7;
+  background: linear-gradient(to right, #eceef7, #ffffff);
 }
 
 [data-theme=light] .modal-content {
-    background: #fff;
+  background: #fff;
 }
 
 [data-theme=light] .tabs-modal .nav-link {
-    background: #e7e1e9;
-    color: #702283 !important;
-    transition: unset;
+  background: #e7e1e9;
+  color: #702283 !important;
+  transition: unset;
 }
 
 [data-theme=light] .tabs-modal .nav-link.active {
-    background: #702283;
-    color: #fff !important;
+  background: #702283;
+  color: #fff !important;
 }
 
 [data-theme=light] .popup-ul li p {
-    background: #702283;
-    color: #fefcff;
+  background: #702283;
+  color: #fefcff;
 }
 
 [data-theme=light] .popup-ul li span {
-    background: #eceef7;
-    background: linear-gradient(to left, #eceef7, #ffffff00);
+  background: #eceef7;
+  background: linear-gradient(to left, #eceef7, #ffffff00);
 }
 
 [data-theme=light] .tabs-style-shape::-webkit-scrollbar-thumb {
-    background-color: #c4c9de !important;
+  background-color: #c4c9de !important;
 }
