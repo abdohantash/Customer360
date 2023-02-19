@@ -61,7 +61,8 @@
                         </div>
 
                         <!--begin::Theme mode-->
-                        <a href="#" title="Change Theme" class="toggle-mode btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
+                        <a href="#" title="Change Theme"
+                            class="toggle-mode btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
                             <span class="svg-icon theme-light-show svg-icon-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +113,8 @@
                                 </svg>
                             </span>
                         </a>
-                        <a href="login.html" title="Logout" class="logout-btn btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
+                        <a href="login.html" title="Logout"
+                            class="logout-btn btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px">
                             <i class="bi bi-box-arrow-right"></i>
                         </a>
                     </div>
@@ -264,7 +266,7 @@
                                     <div class="consumption-list">
                                         <p>
                                             <span>Service</span>
-                                            <span>Total</span>
+                                            <span class="cur-p">Total<i class="bi bi-sort-down"></i></span>
                                         </p>
                                         <ul class="list--scroll">
                                             <li>
@@ -272,7 +274,7 @@
                                                 <span>30</span>
                                             </li>
                                             <li>
-                                                <img src="assets/media/icons/facebook.png" alt="">
+                                                <img src="assets/media/icons/facebook.png" alt="ff" title="55">
                                                 <span>50</span>
                                             </li>
                                             <li>
@@ -317,7 +319,7 @@
                                         <img src="assets/media/icons/icon-process.svg" alt="">
                                     </button>
                                     <h3 class="title-card">Loyalty Points</h3>
-                                    <div class="loyalty-statistics">
+                                    <div class="loyalty-statistics d-none">
                                         <h3>Balance</h3>
                                         <h4>2206</h4>
                                         <span>pts</span>
@@ -325,6 +327,10 @@
                                         <p>110.30 EGP</p>
                                         <h5>date expire</h5>
                                         <h6>18/02/2023</h6>
+                                    </div>
+                                    <div class="loyalty-statistics no-loyalty">
+                                        <img src="assets/media/icons/token.png" alt="">
+                                        <p>no loyalty</p>
                                     </div>
                                     <button type="button" class="points--dts" data-bs-toggle="modal"
                                         data-bs-target="#loyality-details">points history</button>
@@ -1271,13 +1277,17 @@
                                             <h3 class="title-part">Te Billing</h3>
                                             <div class="dts-billing">
                                                 <ul class="port-ul">
+                                                    <div
+                                                        class="form-check form-switch form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox">
+                                                    </div>
                                                     <li>
                                                         <span>Name:</span>
-                                                        <p>تامر صلاح الدين</p>
+                                                        <input type="password" value="تامر صلاح الدين" readonly="">
                                                     </li>
                                                     <li>
                                                         <span>Address:</span>
-                                                        <p>37 ش 18 ب 1 الدلتا</p>
+                                                        <input type="password" value="تامر صلاح الدين" readonly="">
                                                     </li>
                                                     <li>
                                                         <span>Category:</span>
@@ -1684,7 +1694,8 @@
                 <ul>
                     <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
                     <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
-                    <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion historical</li>
+                    <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+                        historical</li>
                     <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
                 </ul>
             </div>
@@ -1693,7 +1704,8 @@
                 <ul>
                     <li>get mac address</li>
                     <li>adjust status</li>
-                    <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy</li>
+                    <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+                    </li>
                     <li>restart-port</li>
                     <li>update-NPID</li>
                     <li>get online service</li>
@@ -1792,12 +1804,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                        <div class="nav nav-tabs tabs-modal" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="accumulation-tab" data-bs-toggle="tab" data-bs-target="#accumulation" type="button" role="tab" aria-selected="true">accumulation</button>
-                            <button class="nav-link" id="redemption-tab" data-bs-toggle="tab" data-bs-target="#redemption" type="button" role="tab" aria-selected="false">redemption</button>
-                        </div>
-                      <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="accumulation" role="tabpanel" aria-labelledby="accumulation-tab">
+                    <div class="nav nav-tabs tabs-modal" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="accumulation-tab" data-bs-toggle="tab"
+                            data-bs-target="#accumulation" type="button" role="tab"
+                            aria-selected="true">accumulation</button>
+                        <button class="nav-link" id="redemption-tab" data-bs-toggle="tab" data-bs-target="#redemption"
+                            type="button" role="tab" aria-selected="false">redemption</button>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="accumulation" role="tabpanel"
+                            aria-labelledby="accumulation-tab">
                             <div class="table-responsive">
                                 <table class="table datatable table-row-bordered">
                                     <thead>
@@ -1841,7 +1857,7 @@
                                 </table>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2594,167 +2610,167 @@
         </div>
     </div>
 
-        <!-- ADSL Availability -->
-        <div class="modal fade" id="kt_modal_UnifiedCheckAvailability" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5">ADSL Availability</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- ADSL Availability -->
+    <div class="modal fade" id="kt_modal_UnifiedCheckAvailability" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">ADSL Availability</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="flex-box-div">
+                        <ul class="popup-ul">
+                            <h3>More Information</h3>
+                            <li>
+                                <p>Area Code</p>
+                                <span>{{UnifiedCheckAvailability.AreaCode}}</span>
+                            </li>
+                            <li>
+                                <p>Congested Pop</p>
+                                <span>{{UnifiedCheckAvailability.CongestedPop}}</span>
+                            </li>
+                            <li>
+                                <p>Currant Service</p>
+                                <span>{{UnifiedCheckAvailability.CurrantService}}</span>
+                            </li>
+                            <li>
+                                <p>HW Type</p>
+                                <span>{{UnifiedCheckAvailability.HWType}}</span>
+                            </li>
+                            <li>
+                                <p>Has SV Card</p>
+                                <span>{{UnifiedCheckAvailability.HasSVCard}}</span>
+                            </li>
+                            <li>
+                                <p>Has VDSL Card</p>
+                                <span>{{UnifiedCheckAvailability.HasVDSLCard}}</span>
+                            </li>
+                            <li>
+                                <p>IS POP VDSL Support</p>
+                                <span>{{UnifiedCheckAvailability.ISPOPVDSLSupport}}</span>
+                            </li>
+                            <li>
+                                <p>Is Customer Exist</p>
+                                <span>{{UnifiedCheckAvailability.IsCustomerExist}}</span>
+                            </li>
+                            <li>
+                                <p>Is POP SV Support</p>
+                                <span>{{UnifiedCheckAvailability.IsPOPSVSupport}}</span>
+                            </li>
+                            <li>
+                                <p>Is SVPort</p>
+                                <span>{{UnifiedCheckAvailability.IsSVPort}}</span>
+                            </li>
+                            <li>
+                                <p>Is VDSL Port</p>
+                                <span>{{UnifiedCheckAvailability.IsVDSLPort}}</span>
+                            </li>
+                            <li>
+                                <p>Line Owner Name</p>
+                                <span>{{UnifiedCheckAvailability.LineOwnerName}}</span>
+                            </li>
+                            <li>
+                                <p>Line Status</p>
+                                <span>{{UnifiedCheckAvailability.LineStatus}}</span>
+                            </li>
+                            <li>
+                                <p>Loop Length</p>
+                                <span>{{UnifiedCheckAvailability.LoopLength}}</span>
+                            </li>
+                            <li>
+                                <p>Phone No</p>
+                                <span>{{UnifiedCheckAvailability.PhoneNo}}</span>
+                            </li>
+                            <li>
+                                <p>Status Code</p>
+                                <span>{{UnifiedCheckAvailability.StatusCode}}</span>
+                            </li>
+                            <li>
+                                <p>Status Desc</p>
+                                <span>{{UnifiedCheckAvailability.StatusDesc}}</span>
+                            </li>
+                            <li>
+                                <p>TEArabic Name</p>
+                                <span>{{UnifiedCheckAvailability.TEArabicName}}</span>
+                            </li>
+                            <li>
+                                <p>TEMSAN Code</p>
+                                <span>{{UnifiedCheckAvailability.TEMSANCode}}</span>
+                            </li>
+                        </ul>
+                        <ul class="popup-ul">
+                            <h3>Pop Data</h3>
+                            <li>
+                                <p>Area Code</p>
+                                <span>{{UnifiedCheckAvailability.PopData.AreaCode}}</span>
+                            </li>
+                            <li>
+                                <p>City</p>
+                                <span>{{UnifiedCheckAvailability.PopData.City}}</span>
+                            </li>
+                            <li>
+                                <p>City Arabic</p>
+                                <span>{{UnifiedCheckAvailability.PopData.CityArabic}}</span>
+                            </li>
+                            <li>
+                                <p>Is SDS</p>
+                                <span>{{UnifiedCheckAvailability.PopData.IsSDS}}</span>
+                            </li>
+                            <li>
+                                <p>Parent Pop Name</p>
+                                <span>{{UnifiedCheckAvailability.PopData.ParentPopName}}</span>
+                            </li>
+                            <li>
+                                <p>Pop AR Name</p>
+                                <span>{{UnifiedCheckAvailability.PopData.PopARName}}</span>
+                            </li>
+                            <li>
+                                <p>Pop ID</p>
+                                <span>{{UnifiedCheckAvailability.PopData.PopID}}</span>
+                            </li>
+                            <li>
+                                <p>Pop Name</p>
+                                <span>{{UnifiedCheckAvailability.PopData.PopName}}</span>
+                            </li>
+                            <li>
+                                <p>Pop Type</p>
+                                <span>{{UnifiedCheckAvailability.PopData.PopType}}</span>
+                            </li>
+                            <li>
+                                <p>Sector</p>
+                                <span>{{UnifiedCheckAvailability.PopData.Sector}}</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="modal-body">
-                        <div class="flex-box-div">
-                            <ul class="popup-ul">
-                                <h3>More Information</h3>
-                                <li>
-                                    <p>Area Code</p>
-                                    <span>{{UnifiedCheckAvailability.AreaCode}}</span>
-                                </li>
-                                <li>
-                                    <p>Congested Pop</p>
-                                    <span>{{UnifiedCheckAvailability.CongestedPop}}</span>
-                                </li>
-                                <li>
-                                    <p>Currant Service</p>
-                                    <span>{{UnifiedCheckAvailability.CurrantService}}</span>
-                                </li>
-                                <li>
-                                    <p>HW Type</p>
-                                    <span>{{UnifiedCheckAvailability.HWType}}</span>
-                                </li>
-                                <li>
-                                    <p>Has SV Card</p>
-                                    <span>{{UnifiedCheckAvailability.HasSVCard}}</span>
-                                </li>
-                                <li>
-                                    <p>Has VDSL Card</p>
-                                    <span>{{UnifiedCheckAvailability.HasVDSLCard}}</span>
-                                </li>
-                                <li>
-                                    <p>IS POP VDSL Support</p>
-                                    <span>{{UnifiedCheckAvailability.ISPOPVDSLSupport}}</span>
-                                </li>
-                                <li>
-                                    <p>Is Customer Exist</p>
-                                    <span>{{UnifiedCheckAvailability.IsCustomerExist}}</span>
-                                </li>
-                                <li>
-                                    <p>Is POP SV Support</p>
-                                    <span>{{UnifiedCheckAvailability.IsPOPSVSupport}}</span>
-                                </li>
-                                <li>
-                                    <p>Is SVPort</p>
-                                    <span>{{UnifiedCheckAvailability.IsSVPort}}</span>
-                                </li>
-                                <li>
-                                    <p>Is VDSL Port</p>
-                                    <span>{{UnifiedCheckAvailability.IsVDSLPort}}</span>
-                                </li>
-                                <li>
-                                    <p>Line Owner Name</p>
-                                    <span>{{UnifiedCheckAvailability.LineOwnerName}}</span>
-                                </li>
-                                <li>
-                                    <p>Line Status</p>
-                                    <span>{{UnifiedCheckAvailability.LineStatus}}</span>
-                                </li>
-                                <li>
-                                    <p>Loop Length</p>
-                                    <span>{{UnifiedCheckAvailability.LoopLength}}</span>
-                                </li>
-                                <li>
-                                    <p>Phone No</p>
-                                    <span>{{UnifiedCheckAvailability.PhoneNo}}</span>
-                                </li>
-                                <li>
-                                    <p>Status Code</p>
-                                    <span>{{UnifiedCheckAvailability.StatusCode}}</span>
-                                </li>
-                                <li>
-                                    <p>Status Desc</p>
-                                    <span>{{UnifiedCheckAvailability.StatusDesc}}</span>
-                                </li>
-                                <li>
-                                    <p>TEArabic Name</p>
-                                    <span>{{UnifiedCheckAvailability.TEArabicName}}</span>
-                                </li>
-                                <li>
-                                    <p>TEMSAN Code</p>
-                                    <span>{{UnifiedCheckAvailability.TEMSANCode}}</span>
-                                </li>
-                            </ul>
-                            <ul class="popup-ul">
-                                <h3>Pop Data</h3>
-                                <li>
-                                    <p>Area Code</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.AreaCode}}</span>
-                                </li>
-                                <li>
-                                    <p>City</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.City}}</span>
-                                </li>
-                                <li>
-                                    <p>City Arabic</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.CityArabic}}</span>
-                                </li>
-                                <li>
-                                    <p>Is SDS</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.IsSDS}}</span>
-                                </li>
-                                <li>
-                                    <p>Parent Pop Name</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.ParentPopName}}</span>
-                                </li>
-                                <li>
-                                    <p>Pop AR Name</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.PopARName}}</span>
-                                </li>
-                                <li>
-                                    <p>Pop ID</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.PopID}}</span>
-                                </li>
-                                <li>
-                                    <p>Pop Name</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.PopName}}</span>
-                                </li>
-                                <li>
-                                    <p>Pop Type</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.PopType}}</span>
-                                </li>
-                                <li>
-                                    <p>Sector</p>
-                                    <span>{{UnifiedCheckAvailability.PopData.Sector}}</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table datatable table-row-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Eligible Service</th>
-                                        <th>Expected Speed</th>
-                                        <th>IPTV</th>
-                                        <th>Is Free Installation</th>
-                                        <th>Recommended Speed</th>
-                                        <th>SLA</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>{{unifiedCheckAvailability.EligibleService}}</td>
-                                        <td>{{unifiedCheckAvailability.ExpectedSpeed}}</td>
-                                        <td>{{unifiedCheckAvailability.IPTV}}</td>
-                                        <td>{{unifiedCheckAvailability.IsFreeInstallation}}</td>
-                                        <td>{{unifiedCheckAvailability.RecommendedpSeed}}</td>
-                                        <td>{{unifiedCheckAvailability.SLA}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table datatable table-row-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Eligible Service</th>
+                                    <th>Expected Speed</th>
+                                    <th>IPTV</th>
+                                    <th>Is Free Installation</th>
+                                    <th>Recommended Speed</th>
+                                    <th>SLA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{unifiedCheckAvailability.EligibleService}}</td>
+                                    <td>{{unifiedCheckAvailability.ExpectedSpeed}}</td>
+                                    <td>{{unifiedCheckAvailability.IPTV}}</td>
+                                    <td>{{unifiedCheckAvailability.IsFreeInstallation}}</td>
+                                    <td>{{unifiedCheckAvailability.RecommendedpSeed}}</td>
+                                    <td>{{unifiedCheckAvailability.SLA}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <!--begin::Javascript-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
@@ -2861,6 +2877,25 @@
                 "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
                 ">"
         });
+    </script>
+
+    <script>
+        var ascending = false;
+        $(document).on('click', '.consumption-list .cur-p', function () {
+            var sorted = $('.list--scroll li').sort(function (a, b) {
+                return (ascending ==
+                    (convertToNumber($(a).find('span').html()) <
+                        convertToNumber($(b).find('span').html()))) ? 1 : -1;
+            });
+            ascending = ascending ? false : true;
+
+            $('.list--scroll').html(sorted); // Modified
+            $('.consumption-list').toggleClass('active')
+        });
+
+        var convertToNumber = function (value) {
+            return parseFloat(value.replace('$', ''));
+        }
     </script>
 </body>
 

@@ -33063,9 +33063,7 @@ h6,
   transition: none !important;
 }
 
-.theme-dark-show {
-  display: none !important;
-}
+
 
 html:not([data-theme=dark]) .theme-light-bg-transparent {
   background-color: transparent !important;
@@ -44654,13 +44652,20 @@ code:not([class*=language-]) {
   background-color: #1d0c2e;
 }
 
+.dts-billing .port-ul .form-check-custom.form-check-solid .form-check-input,
+.dts-billing .port-ul .form-check-custom.form-check-solid .form-check-input:active,
+.dts-billing .port-ul .form-check-custom.form-check-solid .form-check-input:focus {
+  background-color: #403050;
+}
+
 .form-check-custom.form-check-solid .form-check-input:active,
 .form-check-custom.form-check-solid .form-check-input:focus {
   filter: none;
   background-color: #1d0c2e;
 }
 
-.form-check-custom.form-check-solid .form-check-input:checked {
+.form-check-custom.form-check-solid .form-check-input:checked,
+.dts-billing .port-ul .form-check-custom.form-check-solid .form-check-input:checked {
   background-color: #5b2892;
 }
 
@@ -58318,6 +58323,7 @@ em {
   position: absolute;
   right: 15px;
   top: 15px;
+
 }
 
 .refresh img {
@@ -58393,6 +58399,7 @@ em {
 
 .consumed p em {
   color: #BCBCCB;
+  display:block
 }
 
 .consumed h4 {
@@ -58519,6 +58526,15 @@ em {
   flex-direction: column;
   margin-top: 20px;
   background: #763086;
+}
+
+.loyalty-statistics.no-loyalty img{
+  margin-bottom: 10px;
+}
+
+.loyalty-statistics.no-loyalty p{
+  margin: 0;
+  font-size: 16px;
 }
 
 .loyalty-statistics h3 {
@@ -58881,11 +58897,12 @@ em {
 }
 
 .apexcharts-radialbar-track.apexcharts-track path {
-  stroke: #1d0c2e;
+  stroke: #aa20a6;
 }
 
 .apexcharts-series.apexcharts-radial-series path {
-  stroke: #aa20a6;
+  stroke: #1d0c2e;
+  stroke-width: 23px;
 }
 
 .certificate,
@@ -58987,6 +59004,11 @@ em {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.title-part .refresh {
+  top: 0;
+  right: 0;
 }
 
 .title-part img {
@@ -59722,6 +59744,9 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   background: #1d0c2e;
   background: linear-gradient(to right, #1d0c2e, #2e1b41);
   width: max-content;
+  max-width: 100%;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .dts-billing .port-ul li {
@@ -59730,6 +59755,19 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
 .dts-billing .port-ul li span {
   font-size: 15px;
+}
+
+.dts-billing .port-ul li input {
+  padding: 0;
+    margin: 0;
+    border: 0;
+    background: unset;
+    letter-spacing: .2px;
+    font-size: 15px;
+    color: #EEF0F9;
+    width: 200px;
+    outline: unset;
+    box-shadow: unset;
 }
 
 .dts-billing .port-ul li p {
@@ -59786,15 +59824,15 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   height: 100%;
 }
 
-.usage-div .chart-div .usage-chart .circle-progress-value {
-  stroke-width: 5px;
-  stroke: #aa20a6;
-}
+    .usage-div .chart-div .usage-chart .circle-progress-value {
+        stroke-width: 5px;     
+        stroke: #aa20a6;
+    }
 
-.usage-div .chart-div .usage-chart .circle-progress-circle {
-  stroke-width: 5px;
-  stroke: #381d53;
-}
+    .usage-div .chart-div .usage-chart .circle-progress-circle {
+        stroke-width: 5px;
+        stroke: #381d53;
+    }
 
 .usage-div .chart-div .usage-chart .circle-progress-text {
   fill: #fefefe;
@@ -59948,6 +59986,10 @@ table p {
   margin-top: 20px;
 }
 
+.consumption-list.active .cur-p i::before {
+  content: "\f57a";
+}
+
 .consumption-list p {
   display: flex;
   justify-content: space-between;
@@ -60004,6 +60046,17 @@ table p {
   font-weight: normal;
   font-size: 16px;
   margin: 0;
+}
+
+.cur-p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cur-p i {
+  font-size: 20px;
 }
 
 /* responsive */
