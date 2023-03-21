@@ -11,7 +11,7 @@
     <link href="assets/plugins/datatable/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/slidercaptcha/slidercaptcha.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.dark.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.light.css" rel="stylesheet" type="text/css" />
     <!-- <link href="assets/css/style.light.css" rel="stylesheet" type="text/css" /> -->
 </head>
 
@@ -49,6 +49,10 @@
                                     </span>
                                     <input type="text" class="search-input form-control form-control-solid ps-13"
                                         name="search" value="" placeholder="Search by Service No." />
+                                    <div class="phone-mobile">
+                                        <input type="checkbox" id="styled-checkbox">
+                                        <label for="styled-checkbox"></label>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -126,16 +130,32 @@
                     <div class="box-card">
                         <div class="name-numbers">
                             <h3>Mr. Ahmed</h3>
-                            <select class="form-select">
-                                <option value="">235833173</option>
-                                <option value="">532542422</option>
-                            </select>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Choose Num.
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">
+                                            <i class="bi bi-telephone"></i>
+                                            235833173</a></li>
+                                    <li><a class="dropdown-item active" href="#">
+                                            <i class="bi bi-phone"></i>
+                                            532542422</a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <i class="bi bi-telephone"></i>
+                                            235833173</a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <i class="bi bi-phone"></i>
+                                            532542422</a></li>
+                                </ul>
+                            </div>
                             <div class="status active">
-                                <i class="fa fa-circle"></i>
+                                <i class="bi bi-circle-fill"></i>
                                 Active
                             </div>
                             <!-- <div class="status disabled">
-                                <i class="fa fa-circle"></i>
+                                <i class="bi bi-circle-fill"></i>
                                 Disabled
                             </div> -->
 
@@ -228,6 +248,63 @@
                                     <button class="refresh">
                                         <img src="assets/media/icons/icon-process.svg" alt="">
                                     </button>
+                                    <h3 class="title-card"><i class="bi bi-phone"></i>minutes</h3>
+                                    <div class="management-consumed mobile-consumed">
+                                        <div class="consumed">
+                                            <div class="progress-consumed-min"></div>
+                                            <p>
+                                                <span>100 Min <em>Remaining of</em></span>
+                                                <b>1000 Min</b>
+                                            </p>
+                                            <button type="button" class="check--dts" data-bs-toggle="modal"
+                                                data-bs-target="#usage-details">check details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card management">
+                                <div class="card-body">
+                                    <button class="refresh">
+                                        <img src="assets/media/icons/icon-process.svg" alt="">
+                                    </button>
+                                    <h3 class="title-card"><i class="bi bi-chat-left-text"></i>sms</h3>
+                                    <div class="management-consumed mobile-consumed">
+                                        <div class="consumed">
+                                            <div class="progress-consumed-sms"></div>
+                                            <p>
+                                                <span>50 SMS <em>Remaining of</em></span>
+                                                <b>50 SMS</b>
+                                            </p>
+                                            <button type="button" class="check--dts" data-bs-toggle="modal"
+                                                data-bs-target="#usage-details">check details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card management">
+                                <div class="card-body">
+                                    <button class="refresh">
+                                        <img src="assets/media/icons/icon-process.svg" alt="">
+                                    </button>
+                                    <h3 class="title-card"><i class="bi bi-arrow-down-up"></i>mobile internet</h3>
+                                    <div class="management-consumed mobile-consumed">
+                                        <div class="consumed">
+                                            <div class="progress-consumed-internet"></div>
+                                            <p>
+                                                <span>4580 MB <em>Remaining of</em></span>
+                                                <b>12000 MB</b>
+                                            </p>
+                                            <button type="button" class="check--dts" data-bs-toggle="modal"
+                                                data-bs-target="#usage-details">check details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="card management">
+                                <div class="card-body">
+                                    <button class="refresh">
+                                        <img src="assets/media/icons/icon-process.svg" alt="">
+                                    </button>
                                     <h3 class="title-card">Offer Management</h3>
                                     <div class="management-consumed">
                                         <div class="consumed">
@@ -256,7 +333,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="card consumption">
                                 <div class="card-body">
                                     <button class="refresh">
@@ -313,7 +390,7 @@
                                     </div> -->
                                 </div>
                             </div>
-                            <div class="card loyalty">
+                            <!-- <div class="card loyalty">
                                 <div class="card-body">
                                     <button class="refresh">
                                         <img src="assets/media/icons/icon-process.svg" alt="">
@@ -345,10 +422,6 @@
                                     <ul class="port-ul">
                                         <li>
                                             <span>Admin status:</span>
-                                            <!-- <div class="status active">
-                                                <img src="assets/media/icons/Interface-success.svg" alt="">
-                                                Active
-                                            </div> -->
                                             <div class="status disabled">
                                                 <img src="assets/media/icons/Interface-danger.svg" alt="">
                                                 Disabled
@@ -360,7 +433,6 @@
                                                 <em class="active"></em>
                                                 Active
                                             </div>
-                                            <!-- <em class="disabled"></em> -->
                                         </li>
                                         <li>
                                             <span>Port configured speed:</span>
@@ -377,8 +449,9 @@
                                     </ul>
                                     <button type="button" class="restart--port">Restart Port</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
+
                         <svg class="d-none">
                             <defs>
                                 <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z" />
@@ -1722,7 +1795,7 @@
     </nav>
 
     <div class="overlay-menu">
-        <i class="fa fa-times close-menu"></i>
+        <i class="bi bi-x-lg close-menu"></i>
     </div>
 
 
@@ -1764,7 +1837,7 @@
                 <div class="modal-body">
                     <div class="usage-div">
                         <h3>
-                            <i class="fa fa-home"></i>
+                            <i class="bi bi-house"></i>
                             WE Primary Offer
                         </h3>
                         <div class="chart-div">
@@ -1778,7 +1851,7 @@
                     </div>
                     <div class="usage-div">
                         <h3>
-                            <i class="fa fa-home"></i>
+                            <i class="bi bi-house"></i>
                             WE TOPUP
                         </h3>
                         <div class="chart-div">
@@ -2778,7 +2851,6 @@
     <script src="assets/plugins/circle-progress.js"></script>
     <script src="assets/plugins/datatable/datatables.bundle.js"></script>
     <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
-    <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/js/scripts-custom.js"></script>
     <!-- <script>
          $(window).on('load', function() {
@@ -2896,6 +2968,141 @@
         var convertToNumber = function (value) {
             return parseFloat(value.replace('$', ''));
         }
+    </script>
+
+    <script>
+        const maxValue_min = 100;
+        const minValue_min = 0;
+        const valueToPercent_min = (val) => ((val - minValue_min) * 100) / (maxValue_min - minValue_min);
+        var options = {
+            series: [valueToPercent_min(90)],
+            colors: ["#ffc107"],
+            chart: {
+                height: 280,
+                type: 'radialBar',
+                sparkline: {
+                    enabled: true
+                },
+                animations: {
+                    enabled: true,
+                    easing: 'linear',
+                    speed: 3000,
+                }
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 0,
+                        size: '60%'
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    dataLabels: {
+                        value: {
+                            color: undefined,
+                            formatter: (val) => (val * (maxValue_min - minValue_min)) / 100 + minValue_min,
+                        }
+                    },
+                    track: {
+                        strokeWidth: '100%'
+                    },
+                }
+            },
+            labels: [''],
+        };
+
+        var chart = new ApexCharts(document.querySelector(".progress-consumed-min"), options);
+        chart.render();
+    </script>
+    <script>
+        const maxValue_sms = 100;
+        const minValue_sms = 0;
+        const valueToPercent_sms = (val) => ((val - minValue_sms) * 100) / (maxValue_sms - minValue_sms);
+        var options = {
+            series: [valueToPercent_sms(0)],
+            colors: ["#ffc107"],
+            chart: {
+                height: 280,
+                type: 'radialBar',
+                sparkline: {
+                    enabled: true
+                },
+                animations: {
+                    enabled: true,
+                    easing: 'linear',
+                    speed: 3000,
+                }
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 0,
+                        size: '60%'
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    dataLabels: {
+                        value: {
+                            color: undefined,
+                            formatter: (val) => (val * (maxValue_sms - minValue_sms)) / 100 + minValue_sms,
+                        }
+                    },
+                    track: {
+                        strokeWidth: '100%'
+                    },
+                }
+            },
+            labels: [''],
+        };
+
+        var chart = new ApexCharts(document.querySelector(".progress-consumed-sms"), options);
+        chart.render();
+    </script>
+    <script>
+        const maxValue_internet = 100;
+        const minValue_internet = 0;
+        const valueToPercent_internet = (val) => ((val - minValue_internet) * 100) / (maxValue_internet -
+            minValue_internet);
+        var options = {
+            series: [valueToPercent_internet(25)],
+            colors: ["#ffc107"],
+            chart: {
+                height: 280,
+                type: 'radialBar',
+                sparkline: {
+                    enabled: true
+                },
+                animations: {
+                    enabled: true,
+                    easing: 'linear',
+                    speed: 3000,
+                }
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 0,
+                        size: '60%'
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    dataLabels: {
+                        value: {
+                            color: undefined,
+                            formatter: (val) => (val * (maxValue_internet - minValue_internet)) / 100 +
+                                minValue_internet,
+                        }
+                    },
+                    track: {
+                        strokeWidth: '100%'
+                    },
+                }
+            },
+            labels: [''],
+        };
+
+        var chart = new ApexCharts(document.querySelector(".progress-consumed-internet"), options);
+        chart.render();
     </script>
 </body>
 
