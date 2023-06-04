@@ -60147,10 +60147,10 @@ table p {
   top: 1px;
 }
 
-.advanced-search svg {
-  color: rgba(255, 255, 255, 0.75);
-  width: 18px;
-  height: 18px;
+
+.advanced-search i {
+  color: #ffffff;
+  font-size: 18px;
 }
 
 
@@ -60207,13 +60207,14 @@ table p {
 
 .choose-radio {
   display: flex;
-  gap: 20px;
-  align-items: start;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .choose-radio .advanced-tab {
-  width: 100%;
-  min-width: max-content;
+  width: max-content;
 }
 
 
