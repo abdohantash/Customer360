@@ -60273,6 +60273,7 @@ table p {
   background-color: #2c1541 !important;
   border-color: #2c1541 !important;
   color: #fff !important;
+  padding: 7px 12px;
 }
 
 .search-btn-modal {
@@ -60299,6 +60300,57 @@ table p {
 .search-btn-modal i{
   color: #fff;
   font-size: 20px;
+}
+
+.flex-username {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  row-gap: 7px;
+}
+
+.flex-username p {
+  font-size: 16px;
+  margin: 0;
+  text-transform: initial;
+}
+
+.ip-input-container {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: center;
+  border-radius: 5px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.ip-input-container .ip-input-item {
+  width: 80px;
+  text-align: center;
+  border: 0;
+}
+
+.ip-input-container span {
+  position: relative;
+}
+
+.ip-input-container span:nth-child(2)::after,
+.ip-input-container span:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: 6px;
+  width: 4px;
+  height: 4px;
+  background: #a3a3a3;
+  border-radius: 50%;
+}
+
+.ip-input-container span:nth-child(2)::before {
+  left: auto;
+  right: -10px;
 }
 
 /* responsive */

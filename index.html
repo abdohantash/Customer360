@@ -54,7 +54,8 @@
                   </div>
                 </form>
               </div>
-              <button class="advanced-search" data-bs-toggle="modal" data-bs-target="#advanced-search" aria-label="Advanced Search" data-microtip-position="bottom" role="tooltip">
+              <button class="advanced-search" data-bs-toggle="modal" data-bs-target="#advanced-search"
+                aria-label="Advanced Search" data-microtip-position="bottom" role="tooltip">
                 <i class="bi bi-sliders"></i>
               </button>
             </div>
@@ -2873,13 +2874,20 @@
               <input class="form-control" type="text" placeholder="Type The Customer Number">
             </div>
             <div class="number-card" id="username-card">
-              <input class="form-control" type="text" placeholder="Type The UserName">
+              <div class="flex-username">
+                <input class="form-control" type="text" placeholder="Type The UserName">
+                <p>@tedata.net.eg</p>
+              </div>
             </div>
             <div class="number-card" id="wanip-card">
               <input class="form-control" type="text" placeholder="Type The WAN IP">
             </div>
             <div class="number-card" id="ontserial-card">
-              <input class="form-control" type="text" placeholder="Type The ONT Serial">
+              <div class="ip-input-container">
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
+              </div>
             </div>
             <button class="search-btn-modal">
               <i class="bi bi-search"></i>
@@ -3157,6 +3165,31 @@
         var selectedRadio = $('input[name="radio-advanced"]:checked').attr('id');
         $('.number-card').hide();
         $('#' + selectedRadio + '-card').show();
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $('.ip-input-item').on('input', function() {
+        var maxLength = parseInt($(this).attr('maxlength'));
+        var currentLength = $(this).val().length;
+
+        if (currentLength >= maxLength) {
+          var nextField = $(this).parent().next().find('.ip-input-item');
+          if (nextField.length) {
+            nextField.focus();
+          }
+        }
+      });
+
+      $('.ip-input-item').on('keydown', function(e) {
+        if (e.which === 8 && $(this).val() === '') {
+          var prevField = $(this).parent().prev().find('.ip-input-item');
+          if (prevField.length) {
+            prevField.focus();
+          }
+        }
       });
     });
   </script>

@@ -60143,34 +60143,43 @@ table p {
 }
 
 
-@keyframes bounceInDown{
-  100%, 60%, 75%, 90%, 0% {
-    -webkit-animation-timing-function: cubic-bezier(0.215,.61,.355,1);
-    animation-timing-function: cubic-bezier(0.215,.61,.355,1);
-}
+@keyframes bounceInDown {
 
-0% {
+  100%,
+  60%,
+  75%,
+  90%,
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
+  }
+
+  0% {
     opacity: 0;
-    -webkit-transform: translate3d(0,-800px,0);
-    transform: translate3d(0,-800px,0);
-}
-60% {
+    -webkit-transform: translate3d(0, -800px, 0);
+    transform: translate3d(0, -800px, 0);
+  }
+
+  60% {
     opacity: 1;
-    -webkit-transform: translate3d(0,40px,0);
-    transform: translate3d(0,40px,0);
-}
-75% {
-    -webkit-transform: translate3d(0,-20px,0);
-    transform: translate3d(0,-20px,0);
-}
-90% {
-    -webkit-transform: translate3d(0,5px,0);
-    transform: translate3d(0,5px,0);
-}
-100% {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
     -webkit-transform: none;
     transform: none;
-}
+  }
 }
 
 .advanced-search-modal .modal-content h3 {
@@ -60220,7 +60229,16 @@ table p {
   position: relative;
 }
 
-.choose-radio .advanced-tab label i {position: absolute;left: -5px;top: -5px;font-size: 20px;color: #982bb3;background: #fff;border-radius: 50%;display: none;}
+.choose-radio .advanced-tab label i {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  font-size: 20px;
+  color: #982bb3;
+  background: #fff;
+  border-radius: 50%;
+  display: none;
+}
 
 .choose-radio .advanced-tab input:checked~label {
   border: 1px solid #b632d6;
@@ -60244,13 +60262,16 @@ table p {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#username-card, #wanip-card, #ontserial-card {
+#username-card,
+#wanip-card,
+#ontserial-card {
   display: none;
 }
 
 .number-card input {
   border: 1px solid #a3a3a3;
   font-size: 18px;
+  padding: 7px 12px;
 }
 
 .search-btn-modal {
@@ -60274,11 +60295,63 @@ table p {
   background: #77238c;
 }
 
-.search-btn-modal i{
+.search-btn-modal i {
   color: #fff;
   font-size: 20px;
 }
 
+
+.flex-username {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  row-gap: 7px;
+}
+
+.flex-username p {
+  font-size: 16px;
+  margin: 0;
+  text-transform: initial;
+}
+
+.ip-input-container {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: center;
+  border-radius: 5px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.ip-input-container .ip-input-item {
+  width: 80px;
+  text-align: center;
+  border: 0;
+  background: #edeff1;
+}
+
+.ip-input-container span {
+  position: relative;
+}
+
+.ip-input-container span:nth-child(2)::after,
+.ip-input-container span:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: 6px;
+  width: 4px;
+  height: 4px;
+  background: #a3a3a3;
+  border-radius: 50%;
+}
+
+.ip-input-container span:nth-child(2)::before {
+  left: auto;
+  right: -10px;
+}
 
 /* responsive */
 
