@@ -49,8 +49,9 @@
                   <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
                     placeholder="Search by Service No." />
                   <div class="phone-mobile">
-                    <input type="checkbox" id="styled-checkbox">
-                    <label for="styled-checkbox"></label>
+                    <img src="assets/media/icons/wifi-router.png" class="active" alt="">
+                    <img src="assets/media/icons/telephone.png" class="" alt="">
+                    <img src="assets/media/icons/call.png" class="" alt="">
                   </div>
                 </form>
               </div>
@@ -3192,6 +3193,21 @@
         }
       });
     });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+  $('.phone-mobile img').click(function() {
+    // Remove active class from all options
+    $('.phone-mobile img').removeClass('active');    
+    // Add active class to the next option
+    $(this).next('img').addClass('active');    
+    // If the clicked option is the last one, add active class to the first option
+    if ($(this).is(':last-child')) {
+      $('.phone-mobile img:first-child').addClass('active');
+    }
+  });
+});
   </script>
 </body>
 

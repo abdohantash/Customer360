@@ -60032,29 +60032,18 @@ table p {
 .phone-mobile {
   position: absolute;
   right: 6px;
-  top: 4px;
+  top: 10px;
 }
 
-.phone-mobile input {
-  position: absolute;
-  opacity: 0;
-}
-
-.phone-mobile label {
+.phone-mobile img {
   cursor: pointer;
-}
-
-.phone-mobile label::after {
-  content: '\F5C1';
-  font-family: bootstrap-icons !important;
-  font-size: 25px;
-  color: #ffffff9e;
   width: 25px;
   height: 25px;
-}
+  display: none;
+} 
 
-.phone-mobile input:checked+label:after {
-  content: '\F4E7';
+.phone-mobile img.active {
+  display: block;
 }
 
 .topbar-search form .search-input {
