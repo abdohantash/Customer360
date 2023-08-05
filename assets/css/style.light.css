@@ -58133,9 +58133,9 @@ em {
   display: flex;
   align-items: center;
   gap: 25px;
-  width: 100%;
   height: max-content;
   margin-top: 10px;
+  width: max-content;
 }
 
 .name-numbers h3 {
@@ -60032,7 +60032,7 @@ table p {
   width: 25px;
   height: 25px;
   display: none;
-} 
+}
 
 .phone-mobile img.active {
   display: block;
@@ -60340,6 +60340,24 @@ table p {
 .ip-input-container span:nth-child(2)::before {
   left: auto;
   right: -10px;
+}
+
+.box--flex-dts {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.awards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.awards li img {
+  height: 50px;
 }
 
 /* responsive */
