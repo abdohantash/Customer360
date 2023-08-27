@@ -160,7 +160,7 @@
                                   <i class="bi bi-circle-fill"></i>
                                   Disabled
                               </div> -->
-  
+
                 <button type="button" class="super-agent-btn">super agent</button>
               </div>
               <ul class="awards">
@@ -479,6 +479,22 @@
                                     <button type="button" class="restart--port">Restart Port</button>
                                 </div>
                             </div> -->
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <ul class="grid-charts">
+                  <li>
+                    <div class="echart" id="chart-speed"></div>
+                  </li>
+                  <li>
+                    <div class="echart" id="chart-speed-2"></div>
+                  </li>
+                  <li>
+                    <div class="echart" id="chart-speed-3"></div>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <svg class="d-none">
@@ -2913,9 +2929,12 @@
             </div>
             <div class="number-card" id="ontserial-card">
               <div class="ip-input-container">
-                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
-                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
-                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3" value=""></span>
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3"
+                    value=""></span>
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3"
+                    value=""></span>
+                <span><input type="text" class="ip-input-item form-control" pattern="[0-9]" maxlength="3"
+                    value=""></span>
               </div>
             </div>
             <button class="search-btn-modal">
@@ -2931,6 +2950,7 @@
   <!--begin::Javascript-->
   <script src="assets/plugins/global/plugins.bundle.js"></script>
   <script src="assets/plugins/apexcharts.min.js"></script>
+  <script src="assets/plugins/echarts.js"></script>
   <script src="assets/plugins/circle-progress.js"></script>
   <script src="assets/plugins/datatable/datatables.bundle.js"></script>
   <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
@@ -3199,8 +3219,8 @@
   </script>
 
   <script>
-    $(document).ready(function() {
-      $('.ip-input-item').on('input', function() {
+    $(document).ready(function () {
+      $('.ip-input-item').on('input', function () {
         var maxLength = parseInt($(this).attr('maxlength'));
         var currentLength = $(this).val().length;
 
@@ -3212,7 +3232,7 @@
         }
       });
 
-      $('.ip-input-item').on('keydown', function(e) {
+      $('.ip-input-item').on('keydown', function (e) {
         if (e.which === 8 && $(this).val() === '') {
           var prevField = $(this).parent().prev().find('.ip-input-item');
           if (prevField.length) {
@@ -3224,18 +3244,244 @@
   </script>
 
   <script>
-    $(document).ready(function() {
-  $('.phone-mobile img').click(function() {
-    // Remove active class from all options
-    $('.phone-mobile img').removeClass('active');    
-    // Add active class to the next option
-    $(this).next('img').addClass('active');    
-    // If the clicked option is the last one, add active class to the first option
-    if ($(this).is(':last-child')) {
-      $('.phone-mobile img:first-child').addClass('active');
-    }
-  });
-});
+    $(document).ready(function () {
+      $('.phone-mobile img').click(function () {
+        // Remove active class from all options
+        $('.phone-mobile img').removeClass('active');
+        // Add active class to the next option
+        $(this).next('img').addClass('active');
+        // If the clicked option is the last one, add active class to the first option
+        if ($(this).is(':last-child')) {
+          $('.phone-mobile img:first-child').addClass('active');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    var myChart = echarts.init(document.getElementById('chart-speed'));
+    option = {
+      grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '0%',
+        top: '0%'
+      },
+      series: [{
+        type: 'gauge',
+        min: 0,
+        max: 100,
+        splitNumber: 10,
+        radius: '110%',
+        center: ['50%', '57%'],
+        axisLine: {
+          lineStyle: {
+            width: 20,
+            color: [
+              [0.3, '#aa20a6'],
+              [0.7, '#aa20a6'],
+              [1, '#aa20a6']
+            ]
+          }
+        },
+        pointer: {
+          icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
+          length: '70%',
+          width: 16,
+          offsetCenter: [0, '5%']
+        },
+        axisTick: {
+          distance: -20,
+          length: 8,
+          lineStyle: {
+            color: '#fff',
+            width: 2
+          }
+        },
+        splitLine: {
+          distance: -20,
+          length: 20,
+          lineStyle: {
+            color: '#fff',
+            width: 4
+          }
+        },
+        axisLabel: {
+          color: '#702283',
+          distance: 30,
+          fontSize: 16
+        },
+        detail: {
+          fontSize: 20,
+          valueAnimation: true,
+          formatter: '{value} Mpbs',
+          color: '#702283'
+        },
+        data: [{
+          value: 90
+        }]
+      }]
+    };
+    setTimeout(function () {
+      myChart.setOption({
+        series: [{
+          data: [{
+            value: 20
+          }]
+        }]
+      });
+    }, 1000);
+    myChart.setOption(option);
+  </script>
+  <script>
+    var myChart2 = echarts.init(document.getElementById('chart-speed-2'));
+    option = {
+      grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '0%',
+        top: '0%'
+      },
+      series: [{
+        type: 'gauge',
+        min: 0,
+        max: 100,
+        splitNumber: 10,
+        radius: '110%',
+        center: ['50%', '57%'],
+        axisLine: {
+          lineStyle: {
+            width: 20,
+            color: [
+              [0.3, '#aa20a6'],
+              [0.7, '#aa20a6'],
+              [1, '#aa20a6']
+            ]
+          }
+        },
+        pointer: {
+          icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
+          length: '70%',
+          width: 16,
+          offsetCenter: [0, '5%']
+        },
+        axisTick: {
+          distance: -20,
+          length: 8,
+          lineStyle: {
+            color: '#fff',
+            width: 2
+          }
+        },
+        splitLine: {
+          distance: -20,
+          length: 20,
+          lineStyle: {
+            color: '#fff',
+            width: 4
+          }
+        },
+        axisLabel: {
+          color: '#702283',
+          distance: 30,
+          fontSize: 16
+        },
+        detail: {
+          fontSize: 20,
+          valueAnimation: true,
+          formatter: '{value} Mpbs',
+          color: '#702283'
+        },
+        data: [{
+          value: 90
+        }]
+      }]
+    };
+    setTimeout(function () {
+      myChart2.setOption({
+        series: [{
+          data: [{
+            value: 70
+          }]
+        }]
+      });
+    }, 1000);
+    myChart2.setOption(option);
+  </script>
+  <script>
+    var myChart3 = echarts.init(document.getElementById('chart-speed-3'));
+    option = {
+      grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '0%',
+        top: '0%'
+      },
+      series: [{
+        type: 'gauge',
+        min: 0,
+        max: 100,
+        splitNumber: 10,
+        radius: '110%',
+        center: ['50%', '57%'],
+        axisLine: {
+          lineStyle: {
+            width: 20,
+            color: [
+              [0.3, '#aa20a6'],
+              [0.7, '#aa20a6'],
+              [1, '#aa20a6']
+            ]
+          }
+        },
+        pointer: {
+          icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
+          length: '70%',
+          width: 16,
+          offsetCenter: [0, '5%']
+        },
+        axisTick: {
+          distance: -20,
+          length: 8,
+          lineStyle: {
+            color: '#fff',
+            width: 2
+          }
+        },
+        splitLine: {
+          distance: -20,
+          length: 20,
+          lineStyle: {
+            color: '#fff',
+            width: 4
+          }
+        },
+        axisLabel: {
+          color: '#702283',
+          distance: 30,
+          fontSize: 16
+        },
+        detail: {
+          fontSize: 20,
+          valueAnimation: true,
+          formatter: '{value} Mpbs',
+          color: '#702283'
+        },
+        data: [{
+          value: 90
+        }]
+      }]
+    };
+    setTimeout(function () {
+      myChart3.setOption({
+        series: [{
+          data: [{
+            value: 40
+          }]
+        }]
+      });
+    }, 1000);
+    myChart3.setOption(option);
   </script>
 </body>
 
