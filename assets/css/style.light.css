@@ -59141,7 +59141,7 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.super-agent-btn {
+/* .super-agent-btn {
   background: #5b2892;
   color: #fff;
   padding: 3px 15px;
@@ -59155,7 +59155,7 @@ body.no-scroll {
   transform-origin: left top;
   top: 300px;
   z-index: 2;
-}
+} */
 
 .super-agent .head-menu {
   padding: 14px;
@@ -59435,7 +59435,12 @@ body::-webkit-scrollbar {
   border: 0;
   text-transform: capitalize;
 }
-
+.btns-fixed-right .btn--fixed img{
+        display: inline-block;
+    width: 25px;
+    height: 25px;
+    transform: rotateZ(-90deg);
+}
 .before-search {
   width: 100%;
   display: flex;
@@ -61653,4 +61658,398 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 
 .no-consumption img {
   filter: brightness(.2);
+}
+
+.SubscriptionModal{
+z-index: 99999
+}
+.SubscriptionModal .modal-body{
+  
+}
+
+.SubscriptionModal .SuscriptionBody{
+
+}
+.SubscriptionModal .SuscriptionBody .right-side{
+
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate{
+  padding: 15px;
+  box-shadow: 1px 1px 5px #eee;
+  border-radius: 15px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox{
+  text-align: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox h2{
+  font-size: 30px;
+  font-weight: 100;
+  font-family: inherit;
+  margin: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox p{
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  font-weight: 200;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars{
+  justify-content: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars .rate-data{
+  font-family: inherit;
+  margin-top: 10px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle{
+  text-align: center;
+  display: flex;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle h2{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 100;
+  text-transform: none;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle h1{
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+
+.SubscriptionModal .SuscriptionBody .right-side .TableRate{
+margin: 0px 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate .table-responsive{
+  display: block;
+  max-height: 250px;
+  width: 100%;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate .table-responsive::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table{
+  background: #fff !important;
+  background-color: #fff !important;
+  margin-top: 15px;
+  border-spacing: 0 0px !important;
+  padding: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 1px solid #eee;
+    margin-top: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead{
+  background: #854395;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead tr{
+  
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead tr th{
+  color: #fff;
+  font-size: 15px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody{
+  
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr{
+  box-shadow: none;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr:nth-child(even){
+  background: #f1f1f1;
+  background-color: #f1f1f1 !important;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr td{
+padding: 5px;
+  border-radius: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr td p{
+  font-size: 14px;
+  width: max-content;
+}
+
+.FixedLeft_Btns{
+  position: fixed;
+    left: 0;
+    z-index: 9;
+    top: 80px;
+    overflow: auto;
+    display: block;
+    height: calc(100vh - 60px);
+    padding-right: 5px;
+}
+.FixedLeft_Btns button{
+  margin-bottom: 10px;
+}
+.FixedLeft_Btns .customBTN {
+  background: #702283;
+  color: #fff;
+  padding: 3px 0px;
+  font-size: 15px;
+  border-radius: 0px 4px 4px 0;
+  border: 0;
+  text-transform: capitalize;
+  z-index: 2;
+  width: 30px;
+  display: block;
+  height: 120px;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+.FixedLeft_Btns .customBTN span{
+  transform: rotate(-90deg);
+  display: block;
+  width: max-content;
+  position: absolute;
+  left: -25px;
+}
+
+.FixedLeft_Btns .customBTN:nth-child(1){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(1) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(2){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(2) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(3){
+  height: 115px;
+}
+.FixedLeft_Btns .customBTN:nth-child(3) span{
+  left: -31px;
+}
+.FixedLeft_Btns .customBTN:nth-child(4){
+  height: 80px;
+}
+.FixedLeft_Btns .customBTN:nth-child(4) span{
+  left: -10px;
+}
+.FixedLeft_Btns .customBTN:nth-child(5){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(5) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(6){
+  height: 105px;
+}
+.FixedLeft_Btns .customBTN:nth-child(6) span{
+  left: -25px;
+}
+.FixedLeft_Btns .customBTN:nth-child(7){
+height: 120px;
+}
+.FixedLeft_Btns .customBTN:nth-child(7) span{
+  left: -25px;
+}
+.FixedLeft_Btns .customBTN:nth-child(8){
+
+}
+.FixedLeft_Btns .customBTN:nth-child(8) span{
+  
+}
+.FixedLeft_Btns .customBTN:nth-child(9){
+
+}
+.FixedLeft_Btns .customBTN:nth-child(9) span{
+  
+}
+
+
+
+.SubscriptionModal .mostlyBox{
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #eee;
+    position: relative;
+}
+.SubscriptionModal .mostlyBox .titileMostly{
+    
+}
+.SubscriptionModal .mostlyBox .titileMostly h1{
+        margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.SubscriptionModal .mostlyBox .titileMostly h2{
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.SubscriptionModal .mostlyBox .titileMostly h2 img{
+        display: inline-block;
+    height: 40px;
+}
+.SubscriptionModal .chartcircle{
+        margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dfdfdf;
+    display: block;
+
+}
+.SubscriptionModal .chartcircle .chartcontent{
+        width: max-content;
+    margin: auto;
+}
+.SubscriptionModal .CircleChart{
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 5px #eee;
+    height: 100%;
+}
+.SubscriptionModal .CircleChart h2{
+    font-weight: 500;
+    font-size: 14px;
+}
+.SubscriptionModal .chartcircle .chartcontent .usage-chart{
+    width: 85px;
+}
+.SubscriptionModal .chartcircle .chartcontent .usage-chart svg{
+    height: 100%;
+    width: 100%;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-circle {
+    stroke: #d2d6e5;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-value {
+    stroke-width: 6px;
+    stroke: #fc9b00;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-text{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    opacity: 1;
+    fill: #000;
+}
+
+.superAgentRight{
+        position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background: #1d0c2e;
+    width: 40%;
+    right: 0;
+    transition: .3s;
+    transform: translate(100%);
+    overflow: hidden;
+    z-index: 9999;
+    padding: 15px;
+    height: 100%;
+    overflow: auto;
+}
+
+.superAgentRight{
+    background: #fff;
+}
+
+.overlay-menu-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background: #000000cc;
+  transition: .3s;
+  display: none;
+    z-index: 9;
+}
+
+.overlay-menu-right.active {
+  display: block;
+}
+
+.overlay-menu-right .close-menu {
+  position: absolute;
+left: auto;
+    right: 41%;
+  color: #fff !important;
+  font-size: 30px !important;
+  top: 13px;
+  cursor: pointer;
+}
+.SubscriptionModal  .apex-charts{
+    min-height: 50px !important;
+}
+
+
+.SuscriptionBody .accordion{
+    margin-top: 15px;
+}
+
+.SuscriptionBody .accordion .accordion-item{
+    
+}
+
+.SuscriptionBody .accordion .accordion-item .accordion-header{
+    
+}
+
+.SuscriptionBody .accordion  .accordion-header .accordion-button{
+        background: #b640b2;
+    color: #fff;
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 5px !important;
+}
+.SuscriptionBody .accordion-button::after{
+    filter: brightness(100);
+}
+
+
+.SuscriptionBody .accordion-button:not(.collapsed){
+     border-radius: 5px 5px 0 0 !important;
+}
+.OpenCVXPOPUP{
+        position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f00;
+    border: none;
+    background: #fff0;
+}
+.OpenCVXPOPUP i{
+    color: #000;
+    font-size: 20px;
+}
+.SubscriptionModal .consumed p {
+    margin-top: 0;
+    /* display: block; */
+    width: 120%;
+    left: -10%;
+        bottom: 25px;
+}
+.SubscriptionModal .consumed p span{
+        display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 25px;
+    color: #333
+}
+.SubscriptionModal .consumed p em{
+    display: inline-block;
+    color: #121212;
+    font-size: 45px;
+}
+.SubscriptionModal .consumed {
+    width: 250px;
+    min-width: 230px;
+    min-height: 170px;
 }

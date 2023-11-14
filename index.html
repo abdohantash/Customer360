@@ -12,7 +12,9 @@
   <link href="assets/plugins/slidercaptcha/slidercaptcha.css" rel="stylesheet" type="text/css" />
   <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
   <link href="assets/plugins/global/microtip.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="assets/css/style.light.css" rel="stylesheet" type="text/css" />
+<!--   <link href="assets/css/style.dark.css" rel="stylesheet" type="text/css" /> -->
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
@@ -160,8 +162,16 @@
                                   <i class="bi bi-circle-fill"></i>
                                   Disabled
                               </div> -->
+                              
+                <div class="FixedLeft_Btns">
+                  <button type="button" class="customBTN " id="HDM"><span>HDM</span></button>
+                  <button type="button" class="customBTN " id="NST"><span>NST</span></button>
+                  <button type="button" class="customBTN " id="Asia_Hostrical"><span>Asia Hostrical</span></button>
+                  <button type="button" class="customBTN " id="Actions"><span>Actions</span></button>
+                  <button type="button" class="customBTN " id="Asia"><span>Asia</span></button>
+                  <button type="button" class="customBTN " id="Port_actions"><span>Port actions</span></button>
+                </div>
 
-                <button type="button" class="super-agent-btn">super agent</button>
               </div>
               <ul class="awards">
                 <li aria-label="Audi" data-microtip-position="bottom" role="tooltip">
@@ -1751,14 +1761,322 @@
   </div>
 
   <div class="btns-fixed-right">
-    <button type="button" class="btn--fixed">test btn</button>
-    <button type="button" class="btn--fixed">test btn</button>
+
+    <button type="button" class="btn--fixed" id="CVX">CVX <img class="ImageImojy" src="assets/media/icons/smiling.svg"></button>
     <button type="button" class="btn--fixed">test btn</button>
   </div>
-
-  <nav class="super-agent">
+<!--
+  <div class="modal fade SubscriptionModal" id="subscribe-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="SuscriptionBody">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mostlyBox">
+                            <div class="titileMostly">
+                                <h1>Mostly Answers</h1>
+                                <h2><img src="assets/media/icons/smiling.svg"><span> 8 Answers</span></h2>
+                            </div>
+                            <div class="chartcircle">
+                                <div class="chartcontent">
+                                    <div class="usage-chart" id="chartpop1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="CircleChart">
+                            <h2>Promoter Count, Passive Count and Detractor Count</h2>
+                            <div id="donut_chart" class="apex-charts"  dir="ltr"></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="right-side">
+                  <div class="uperbox-rate">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="reatePox">
+                          <h2>4.46</h2>
+                          <p>Overall Rating</p>
+                          <div class="stars" style="display: flex; align-items: center; margin: 0 5px">
+                            <span class="rate-data">93.75%</span>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_1" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_1)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_2" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_2)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_3" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_3)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_4" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_4)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_5" x1="0%" x2="100%" y1="0" y2="0"><stop offset="70%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="40%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_5)"></path></svg></div>
+                            <span class="rate-data">4.69/5</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="SubscrTitle">
+                          <div class="forflex">
+                            <h2>Subscriber satisfaction</h2>
+                          <h1>Promoter</h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="RateCharte">
+                          <div id="bar_chart" class="apex-charts" dir="ltr"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="TableRate">
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead class=" ">
+                          <tr>
+                            <th>Subscriber_ID</th>
+                            <th>Initiation_Dat</th>
+                            <th>Question_Script</th>
+                            <th>dasdasd</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd dasdasd dasdasd dasdasd dasdasd dasdasd dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                            <td>
+                              <p>dasdasd</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          </div>
+      </div>
+    </div>
+  </div>
+-->
+    
+      <div class="modal fade SubscriptionModal" id="OpenCVXPOPUP" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="SuscriptionBody">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card management">
+                            <div class="card-body">
+                              <h3 class="title-card"><i class="bi bi-phone"></i>SMS Answer & SMS Send</h3>
+                              <div class="management-consumed mobile-consumed">
+                                <div class="consumed">
+                                  <div class="progress-consumed-answer"></div>
+                                  <p>
+                                    <span>0 <em>8</em> 8</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card management">
+                            <div class="card-body">
+                              <h3 class="title-card"><i class="bi bi-phone"></i>IVR Answer & IVR Send</h3>
+                              <div class="management-consumed mobile-consumed">
+                                <div class="consumed">
+                                  <div class="progress-consumed-IVR"></div>
+                                  <p>
+                                    <span>0 <em>8</em> 8</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+  
+          </div>
+        
+          </div>
+      </div>
+    </div>
+  </div>
+  <nav class="super-agent HDM">
     <div class="head-menu">
-      <h3 class="title-menu">super agent task</h3>
+      <h3 class="title-menu">HDM</h3>
       <form class="" autocomplete="off">
         <span
           class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
@@ -1827,10 +2145,658 @@
     </div>
   </nav>
 
+  <nav class="super-agent NST">
+    <div class="head-menu">
+      <h3 class="title-menu">NST</h3>
+      <form class="" autocomplete="off">
+        <span
+          class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+              transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+            <path
+              d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+              fill="currentColor"></path>
+          </svg>
+        </span>
+        <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
+          placeholder="Search..">
+      </form>
+    </div>
+    <div class="scroll-menu">
+      <div class="agentbox">
+        <h4>Actions <span></span></h4>
+        <ul>
+          <li>get password</li>
+          <li>send username and password</li>
+          <li>mac not learned</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Clearview">clear view</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Selt">SELT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Diagnostic_RT">diagnostic-RT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_RealTime_Diagnostic">RealTime-diagnostic</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Service_Recommendation">service-recommendtion</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_LineSpeed">line-speed</li>
+          <li>profile-optimization</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia historical<span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+            historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Matrix <span></span></h4>
+        <ul>
+          <li>get mac address</li>
+          <li>adjust status</li>
+          <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+          </li>
+          <li>restart-port</li>
+          <li>update-NPID</li>
+          <li>get online service</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>NST <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getLdapProfile">ldap profile</li>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getSessionLogs">session logs</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <nav class="super-agent Asia_Hostrical">
+    <div class="head-menu">
+      <h3 class="title-menu">Asia Hostrical</h3>
+      <form class="" autocomplete="off">
+        <span
+          class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+              transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+            <path
+              d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+              fill="currentColor"></path>
+          </svg>
+        </span>
+        <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
+          placeholder="Search..">
+      </form>
+    </div>
+    <div class="scroll-menu">
+      <div class="agentbox">
+        <h4>Actions <span></span></h4>
+        <ul>
+          <li>get password</li>
+          <li>send username and password</li>
+          <li>mac not learned</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Clearview">clear view</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Selt">SELT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Diagnostic_RT">diagnostic-RT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_RealTime_Diagnostic">RealTime-diagnostic</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Service_Recommendation">service-recommendtion</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_LineSpeed">line-speed</li>
+          <li>profile-optimization</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia historical<span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+            historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Matrix <span></span></h4>
+        <ul>
+          <li>get mac address</li>
+          <li>adjust status</li>
+          <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+          </li>
+          <li>restart-port</li>
+          <li>update-NPID</li>
+          <li>get online service</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>NST <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getLdapProfile">ldap profile</li>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getSessionLogs">session logs</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="super-agent Actions">
+    <div class="head-menu">
+      <h3 class="title-menu">Actions</h3>
+      <form class="" autocomplete="off">
+        <span
+          class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+              transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+            <path
+              d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+              fill="currentColor"></path>
+          </svg>
+        </span>
+        <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
+          placeholder="Search..">
+      </form>
+    </div>
+    <div class="scroll-menu">
+      <div class="agentbox">
+        <h4>Actions <span></span></h4>
+        <ul>
+          <li>get password</li>
+          <li>send username and password</li>
+          <li>mac not learned</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Clearview">clear view</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Selt">SELT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Diagnostic_RT">diagnostic-RT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_RealTime_Diagnostic">RealTime-diagnostic</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Service_Recommendation">service-recommendtion</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_LineSpeed">line-speed</li>
+          <li>profile-optimization</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia historical<span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+            historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Matrix <span></span></h4>
+        <ul>
+          <li>get mac address</li>
+          <li>adjust status</li>
+          <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+          </li>
+          <li>restart-port</li>
+          <li>update-NPID</li>
+          <li>get online service</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>NST <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getLdapProfile">ldap profile</li>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getSessionLogs">session logs</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="super-agent Asia">
+    <div class="head-menu">
+      <h3 class="title-menu">Asia</h3>
+      <form class="" autocomplete="off">
+        <span
+          class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+              transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+            <path
+              d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+              fill="currentColor"></path>
+          </svg>
+        </span>
+        <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
+          placeholder="Search..">
+      </form>
+    </div>
+    <div class="scroll-menu">
+      <div class="agentbox">
+        <h4>Actions <span></span></h4>
+        <ul>
+          <li>get password</li>
+          <li>send username and password</li>
+          <li>mac not learned</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Clearview">clear view</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Selt">SELT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Diagnostic_RT">diagnostic-RT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_RealTime_Diagnostic">RealTime-diagnostic</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Service_Recommendation">service-recommendtion</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_LineSpeed">line-speed</li>
+          <li>profile-optimization</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia historical<span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+            historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Matrix <span></span></h4>
+        <ul>
+          <li>get mac address</li>
+          <li>adjust status</li>
+          <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+          </li>
+          <li>restart-port</li>
+          <li>update-NPID</li>
+          <li>get online service</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>NST <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getLdapProfile">ldap profile</li>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getSessionLogs">session logs</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="super-agent Port_actions">
+    <div class="head-menu">
+      <h3 class="title-menu">Port Actions</h3>
+      <form class="" autocomplete="off">
+        <span
+          class="svg-icon svg-icon-2 svg-icon-lg-3 svg-icon-gray-800 position-absolute top-50 translate-middle-y ms-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+              transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+            <path
+              d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+              fill="currentColor"></path>
+          </svg>
+        </span>
+        <input type="text" class="search-input form-control form-control-solid ps-13" name="search" value=""
+          placeholder="Search..">
+      </form>
+    </div>
+    <div class="scroll-menu">
+      <div class="agentbox">
+        <h4>Actions <span></span></h4>
+        <ul>
+          <li>get password</li>
+          <li>send username and password</li>
+          <li>mac not learned</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Clearview">clear view</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Selt">SELT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Diagnostic_RT">diagnostic-RT</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_RealTime_Diagnostic">RealTime-diagnostic</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_Service_Recommendation">service-recommendtion</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_LineSpeed">line-speed</li>
+          <li>profile-optimization</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Assia historical<span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Clearview">clear view historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_LineSummery">line summary historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_Service_Recommendation">service recommendtion
+            historical</li>
+          <li data-bs-toggle="modal" data-bs-target="#Assia_HS_CPEVersion">CPE version historical</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>Matrix <span></span></h4>
+        <ul>
+          <li>get mac address</li>
+          <li>adjust status</li>
+          <li data-bs-toggle="modal" data-bs-target="#kt_modal_UnifiedCheckAvailability">get ADSL availablitiy
+          </li>
+          <li>restart-port</li>
+          <li>update-NPID</li>
+          <li>get online service</li>
+        </ul>
+      </div>
+      <div class="agentbox">
+        <h4>NST <span></span></h4>
+        <ul>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getLdapProfile">ldap profile</li>
+          <li data-bs-toggle="modal" data-bs-target="#NST_getSessionLogs">session logs</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <nav class="super-agent superAgentRight CVX">
+<div class="SubscriptionModal ">
+                    <div class="SuscriptionBody">
+            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="right-side">
+                  <div class="uperbox-rate">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="reatePox">
+                          <h2>4.46</h2>
+                          <p>Overall Rating</p>
+                          <div class="stars" style="display: flex; align-items: center; margin: 0 5px">
+                            <span class="rate-data">93.75%</span>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_1" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_1)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_2" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_2)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_3" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_3)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_4" x1="0%" x2="100%" y1="0" y2="0"><stop offset="100%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="100%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_4)"></path></svg></div>
+                            <div class="star"><svg height="25" width="25" viewBox="0 0 25 25"><linearGradient id="c1_5" x1="0%" x2="100%" y1="0" y2="0"><stop offset="70%" stop-color="var(--bps-star--filled, #702283)"></stop><stop offset="40%" stop-color="var(--bps-star, #e1e8ed)"></stop></linearGradient><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="url(#c1_5)"></path></svg></div>
+                            <span class="rate-data">4.69/5</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="SubscrTitle">
+                          <div class="forflex">
+                            <h2>Subscriber satisfaction</h2>
+                          <h1>Promoter</h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="RateCharte">
+                          <div id="bar_chart" class="apex-charts" dir="ltr"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             
+                                  </div>
+              </div>
+          
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="mostlyBox">
+                            <div class="titileMostly">
+                                <button class="OpenCVXPOPUP" data-bs-toggle="modal" data-bs-target="#OpenCVXPOPUP"><i class="bi bi-chat-left-text"></i></button>
+                                <h1>Mostly Answers</h1>
+                                <h2><img src="assets/media/icons/smiling.svg"><span> 8 Answers</span></h2>
+                            </div>
+                            <div class="chartcircle">
+                                <div class="chartcontent">
+                                    <div class="usage-chart" id="chartpop1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="CircleChart">
+                            <h2>Promoter Count, Passive Count and Detractor Count</h2>
+                            <div id="donut_chart" class="apex-charts"  dir="ltr"></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Table Name Taps
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                                 <div class="right-side">
+<div class="TableRate">
+<div class="table-responsive">
+<table class="table table-striped">
+<thead class=" ">
+<tr>
+<th>Subscriber_ID</th>
+<th>Initiation_Dat</th>
+<th>Question_Script</th>
+<th>dasdasd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd dasdasd dasdasd dasdasd dasdasd dasdasd dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+<td>
+<p>dasdasd</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end accordion -->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+       
+                </div>
+                       
+                        </div>
+          </div>
+        
+      </div>
+    </nav>
+  
+  
+
+
+
+
   <div class="overlay-menu">
     <i class="bi bi-x-lg close-menu"></i>
   </div>
-
+<div class="overlay-menu-right">
+    <i class="bi bi-x-lg close-menu"></i>
+  </div>
 
   <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
     <span class="svg-icon">
@@ -2981,6 +3947,19 @@
       animationDuration: 1000
     });
   </script>
+      <script>
+    new CircleProgress('#chartpop1', {
+      min: 0,
+        chart: {
+        height: 280,
+        },
+      max: 100,
+      value: 73,
+      clockwise: true,
+      textFormat: 'percent',
+      animationDuration: 1000
+    });
+  </script>
   <script>
     new CircleProgress('#chart2', {
       min: 0,
@@ -3117,6 +4096,12 @@
     var chart = new ApexCharts(document.querySelector(".progress-consumed-min"), options);
     chart.render();
   </script>
+    
+    
+
+
+    
+    
   <script>
     const maxValue_sms = 100;
     const minValue_sms = 0;
@@ -3161,6 +4146,100 @@
     var chart = new ApexCharts(document.querySelector(".progress-consumed-sms"), options);
     chart.render();
   </script>
+    
+    
+      <script>
+    const maxValue_answer = 100;
+    const minValue_answer = 0;
+    const valueToPercent_answer = (val) => ((val - minValue_answer) * 100) / (maxValue_answer - minValue_answer);
+    var options = {
+      series: [valueToPercent_answer(0)],
+      colors: ["#ffc107"],
+      chart: {
+        height: 280,
+        type: 'radialBar',
+        sparkline: {
+          enabled: true
+        },
+        animations: {
+          enabled: true,
+          easing: 'linear',
+          speed: 3000,
+        }
+      },
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            margin: 0,
+            size: '60%'
+          },
+          startAngle: -90,
+          endAngle: 90,
+          dataLabels: {
+            value: {
+              color: undefined,
+              formatter: (val) => (val * (maxValue_answer - minValue_answer)) / 100 + minValue_answer,
+            }
+          },
+          track: {
+            strokeWidth: '100%'
+          },
+        }
+      },
+      labels: [''],
+    };
+
+    var chart = new ApexCharts(document.querySelector(".progress-consumed-answer"), options);
+    chart.render();
+  </script>
+    
+    
+    
+          <script>
+    const maxValue_IVR = 100;
+    const minValue_IVR = 0;
+    const valueToPercent_IVR = (val) => ((val - minValue_IVR) * 100) / (maxValue_IVR - minValue_IVR);
+    var options = {
+      series: [valueToPercent_IVR(50)],
+      colors: ["#ffc107"],
+      chart: {
+        height: 280,
+        type: 'radialBar',
+        sparkline: {
+          enabled: true
+        },
+        animations: {
+          enabled: true,
+          easing: 'linear',
+          speed: 3000,
+        }
+      },
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            margin: 0,
+            size: '60%'
+          },
+          startAngle: -90,
+          endAngle: 90,
+          dataLabels: {
+            value: {
+              color: undefined,
+              formatter: (val) => (val * (maxValue_IVR - minValue_IVR)) / 100 + minValue_IVR,
+            }
+          },
+          track: {
+            strokeWidth: '100%'
+          },
+        }
+      },
+      labels: [''],
+    };
+
+    var chart = new ApexCharts(document.querySelector(".progress-consumed-IVR"), options);
+    chart.render();
+  </script>
+    
   <script>
     const maxValue_internet = 100;
     const minValue_internet = 0;
@@ -3207,6 +4286,9 @@
     var chart = new ApexCharts(document.querySelector(".progress-consumed-internet"), options);
     chart.render();
   </script>
+    
+    
+
 
   <script>
     $(document).ready(function () {
@@ -3483,6 +4565,168 @@
     }, 1000);
     myChart3.setOption(option);
   </script>
+  <!--Hussein-->
+  <script>
+    options = {
+    chart: {
+        height: 200,
+        type: "bar",
+        toolbar: {
+            show: !1
+        }
+    },
+    plotOptions: {
+        bar: {
+            horizontal: !0
+        }
+    },
+    dataLabels: {
+        enabled: 1
+    },
+    series: [{
+        data: [10, 8, 15, 7, 18],
+       
+    }],
+    colors: ["#aa20a6"],
+    grid: {
+        borderColor: "#fff"
+    },
+ 
+    yaxis: {
+        title: {
+          text: "Month",
+            style: {
+              fontWeight: "600",
+            }
+        }
+    },
+    xaxis: {
+      categories: ["March", "April", "May", "July", "September"],
+      title: {
+        text: "Sum of Updated-score",
+            style: {
+              fontWeight: "600",
+            }
+        },
+    }
+};
+(chart = new ApexCharts(document.querySelector("#bar_chart"), options)).render();
+  </script>
+    <script>
+        options = {
+    chart: {
+        height: 250,
+        type: "donut"
+    },
+    series: [44, 55, 41],
+    labels: ["Series 1", "Series 2", "Series 3"],
+    colors: ["#34c38f", "#556ee6", "#f46a6a"],
+    legend: {
+        show: !0,
+        position: "right",
+        horizontalAlign: "center",
+        verticalAlign: "middle",
+        floating:0,
+        fontSize: "14px",
+        offsetX: 0
+    },
+    responsive: [{
+        breakpoint: 400,
+        options: {
+            chart: {
+                height: 240
+            },
+            legend: {
+                show: !1
+            }
+        }
+    }]
+};
+(chart = new ApexCharts(document.querySelector("#donut_chart"), options)).render();
+    </script>
+
+    
+    <script>
+        $(document).ready(function() {
+  // Add click event listener to each button
+  $('.btns-fixed-right button').click(function() {
+      
+    // Remove 'active' class from all buttons
+    $('.btns-fixed-right button').removeClass('active');
+    // Add 'active' class to the clicked button
+    $(this).addClass('active');
+      
+      
+                    // Get the class name of the parent element of the clicked button
+    var className = $(this).attr('id');
+ 
+    // Remove 'active' class from all nav elements
+    $('nav.superAgentRight').removeClass('active');
+
+    // Add 'active' class to the nav element with the corresponding class name
+    $('nav.' + className).addClass('active');
+
+    // Add 'active' class to the overlay-menu-right
+    $('.overlay-menu-right').addClass('active');
+
+    // Add 'no-scroll' class to the body
+    $('body').addClass('no-scroll');
+ });
+            
+              $(document).on('click', '.overlay-menu-right .close-menu, .overlay-menu-right', function() {
+    // Remove 'active' class from all nav elements
+    $('nav.superAgentRight').removeClass('active');
+
+    // Remove 'active' class from the overlay-menu
+    $('.overlay-menu-right').removeClass('active');
+
+    // Remove 'no-scroll' class from the body
+    $('body').removeClass('no-scroll');
+  });
+  
+        });
+      
+    </script>
+      <script>
+
+
+$(document).ready(function() {
+  // Add click event listener to each button
+  $('.FixedLeft_Btns button').click(function() {
+    // Remove 'active' class from all buttons
+    $('.FixedLeft_Btns button').removeClass('active');
+
+    // Add 'active' class to the clicked button
+    $(this).addClass('active');
+
+    // Get the class name of the parent element of the clicked button
+    var className = $(this).attr('id');
+ 
+    // Remove 'active' class from all nav elements
+    $('nav.super-agent').removeClass('active');
+
+    // Add 'active' class to the nav element with the corresponding class name
+    $('nav.' + className).addClass('active');
+
+    // Add 'active' class to the overlay-menu
+    $('.overlay-menu').addClass('active');
+
+    // Add 'no-scroll' class to the body
+    $('body').addClass('no-scroll');
+  });
+
+  $(document).on('click', '.close-menu, .overlay-menu', function() {
+    // Remove 'active' class from all nav elements
+    $('nav.super-agent').removeClass('active');
+
+    // Remove 'active' class from the overlay-menu
+    $('.overlay-menu').removeClass('active');
+
+    // Remove 'no-scroll' class from the body
+    $('body').removeClass('no-scroll');
+  });
+});
+      </script>
 </body>
 
 </html>

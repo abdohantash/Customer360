@@ -59444,7 +59444,12 @@ body::-webkit-scrollbar {
   border: 0;
   text-transform: capitalize;
 }
-
+.btns-fixed-right .btn--fixed img{
+        display: inline-block;
+    width: 25px;
+    height: 25px;
+    transform: rotateZ(-90deg);
+}
 .before-search {
   width: 100%;
   display: flex;
@@ -60396,6 +60401,312 @@ table p {
   height: 280px;
   direction: ltr;
 }
+
+
+.SubscriptionModal{
+
+}
+.SubscriptionModal .modal-body{
+  
+}
+
+.SubscriptionModal .SuscriptionBody{
+
+}
+.SubscriptionModal .SuscriptionBody .right-side{
+
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate{
+  padding: 15px;
+  box-shadow: 1px 1px 5px #1d0c2e;
+  border-radius: 15px;
+  background: #2e1b41;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox{
+  text-align: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox h2{
+  font-size: 45px;
+  font-weight: 100;
+  font-family: inherit;
+  margin: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox p{
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+  font-weight: 200;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars{
+  justify-content: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars .rate-data{
+  font-family: inherit;
+  margin-top: 20px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle{
+  text-align: center;
+  display: flex;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle h2{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 100;
+  text-transform: none;
+}
+.SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle h1{
+  font-size: 40px;
+  margin: 10px 0;
+  font-weight: 500;
+  font-family: inherit;
+}
+.apexcharts-yaxis text{
+  fill: #eee !important;
+}
+.apexcharts-xaxis text{
+  fill: #eee !important;
+}
+
+.SubscriptionModal .SuscriptionBody .right-side .TableRate{
+margin: 15px 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate .table-responsive{
+  display: block;
+  max-height: 250px;
+  width: 100%;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate .table-responsive::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table{
+  background: #fff !important;
+  background-color: #fff !important;
+  margin-top: 15px;
+  border-spacing: 0 0px !important;
+  padding: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 1px solid #eee;
+    margin-top: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead{
+  background: #854395;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead tr{
+  
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table thead tr th{
+  color: #fff;
+  font-size: 15px;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody{
+  
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr{
+  box-shadow: none;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr:nth-child(even){
+  background: #f1f1f1;
+  background-color: #f1f1f1 !important;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr td{
+padding: 5px;
+  border-radius: 0;
+}
+.SubscriptionModal .SuscriptionBody .right-side .TableRate table tbody tr td p{
+  font-size: 14px;
+  width: max-content;
+}
+
+.FixedLeft_Btns{
+  position: fixed;
+    left: 0;
+    z-index: 9;
+    top: 80px;
+    overflow: auto;
+    display: block;
+    height: calc(100vh - 60px);
+    padding-right: 5px;
+}
+.FixedLeft_Btns button{
+  margin-bottom: 10px;
+}
+.FixedLeft_Btns .customBTN {
+  background: #5b2892;
+  color: #fff;
+  padding: 3px 0px;
+  font-size: 15px;
+  border-radius: 0px 4px 4px 0;
+  border: 0;
+  text-transform: capitalize;
+  z-index: 2;
+  width: 30px;
+  display: block;
+  height: 120px;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+.FixedLeft_Btns .customBTN span{
+  transform: rotate(-90deg);
+  display: block;
+  width: max-content;
+  position: absolute;
+  left: -25px;
+}
+
+.FixedLeft_Btns .customBTN:nth-child(1){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(1) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(2){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(2) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(3){
+  height: 115px;
+}
+.FixedLeft_Btns .customBTN:nth-child(3) span{
+  left: -31px;
+}
+.FixedLeft_Btns .customBTN:nth-child(4){
+  height: 80px;
+}
+.FixedLeft_Btns .customBTN:nth-child(4) span{
+  left: -10px;
+}
+.FixedLeft_Btns .customBTN:nth-child(5){
+  height: 60px;
+}
+.FixedLeft_Btns .customBTN:nth-child(5) span{
+  left: 0;
+}
+.FixedLeft_Btns .customBTN:nth-child(6){
+  height: 105px;
+}
+.FixedLeft_Btns .customBTN:nth-child(6) span{
+  left: -25px;
+}
+.FixedLeft_Btns .customBTN:nth-child(7){
+height: 120px;
+}
+.FixedLeft_Btns .customBTN:nth-child(7) span{
+  left: -25px;
+}
+.FixedLeft_Btns .customBTN:nth-child(8){
+
+}
+.FixedLeft_Btns .customBTN:nth-child(8) span{
+  
+}
+.FixedLeft_Btns .customBTN:nth-child(9){
+
+}
+.FixedLeft_Btns .customBTN:nth-child(9) span{
+  
+}
+
+
+.SubscriptionModal .mostlyBox{
+    padding: 15px;
+    box-shadow: 1px 1px 5px #1d0c2e;
+    border-radius: 15px;
+    background: #2e1b41;
+}
+.SubscriptionModal .mostlyBox .titileMostly{
+    
+}
+.SubscriptionModal .mostlyBox .titileMostly h1{
+        margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.SubscriptionModal .mostlyBox .titileMostly h2{
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.SubscriptionModal .mostlyBox .titileMostly h2 img{
+        display: inline-block;
+    height: 40px;
+}
+.SubscriptionModal .chartcircle{
+        margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dfdfdf;
+    display: block;
+
+}
+.SubscriptionModal .chartcircle .chartcontent{
+        width: max-content;
+    margin: auto;
+}
+.SubscriptionModal .CircleChart{
+    padding: 15px;
+    box-shadow: 1px 1px 5px #1d0c2e;
+    border-radius: 15px;
+    background: #2e1b41;
+}
+.SubscriptionModal .CircleChart h2{
+    font-weight: 500;
+    font-size: 16px;
+}
+.SubscriptionModal .chartcircle .chartcontent .usage-chart{
+    width: 125px;
+}
+.SubscriptionModal .chartcircle .chartcontent .usage-chart svg{
+    height: 100%;
+    width: 100%;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-circle {
+    stroke: #51485b;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-value {
+    stroke-width: 6px;
+    stroke: #fc9b00;
+}
+.SubscriptionModal .chartcircle .chartcontent .circle-progress-text{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 1;
+    fill: #fff;
+}
+
+
+.SubscriptionModal .CircleChart .apexcharts-legend-text{
+    color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* responsive */
 @media (max-width:1300px) {
