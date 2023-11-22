@@ -59445,6 +59445,13 @@ body::-webkit-scrollbar {
   text-transform: capitalize;
 }
 
+.btns-fixed-right .btn--fixed img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  transform: rotateZ(-90deg);
+}
+
 .before-search {
   width: 100%;
   display: flex;
@@ -60396,6 +60403,8 @@ table p {
   height: 280px;
   direction: ltr;
 }
+
+
 
 /* responsive */
 @media (max-width:1300px) {

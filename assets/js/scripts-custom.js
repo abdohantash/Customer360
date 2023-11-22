@@ -1,16 +1,42 @@
 "use strict";
 // menu
-$(document).on('click', '.super-agent-btn', function () {
-    $('.super-agent').addClass('active');
-    $('.overlay-menu').addClass('active');
-    $('body').addClass('no-scroll');
-});
+// $(document).on('click', '.HDM-btn', function () {
+//     $('.HDM').addClass('active');
+//     $('.overlay-menu').addClass('active');
+//     $('body').addClass('no-scroll');
+// });
 
-$(document).on('click', '.close-menu,.overlay-menu', function () {
-    $('.super-agent').removeClass('active');
-    $('.overlay-menu').removeClass('active');
-    $('body').removeClass('no-scroll');
-});
+// $(document).on('click', '.NST-btn', function () {
+//     $('.NST').addClass('active');
+//     $('.overlay-menu').addClass('active');
+//     $('body').addClass('no-scroll');
+// });
+
+// $(document).on('click', '.AsiaHostrical-btn', function () {
+//     $('.AsiaHostrical').addClass('active');
+//     $('.overlay-menu').addClass('active');
+//     $('body').addClass('no-scroll');
+// });
+// $(document).on('click', '.Actions-btn', function () {
+//     $('.Actions').addClass('active');
+//     $('.overlay-menu').addClass('active');
+//     $('body').addClass('no-scroll');
+// });
+
+// $(document).on('click', '.close-menu,.overlay-menu', function () {
+//     $('.HDM').removeClass('active');
+//     $('.NST').removeClass('active');
+//     $('.AsiaHostrical').removeClass('active');
+//     $('.Actions').removeClass('active');
+//     $('.NST').removeClass('active');
+//     $('.NST').removeClass('active');
+//     $('.NST').removeClass('active');
+//     $('.NST').removeClass('active');
+    
+//     $('.overlay-menu').removeClass('active');
+//     $('body').removeClass('no-scroll');
+// });
+
 
 // toggle btn
 // $(document).on('change', '.certificate .form-check-input', function () {
@@ -69,10 +95,10 @@ $(document).on('click', '.close-menu,.overlay-menu', function () {
 
 
 // super agent active
-$(document).on('click', '.agentbox ul li', function () {
-    $('.agentbox ul li').removeClass('active');
-    $(this).addClass('active');
-});
+// $(document).on('click', '.agentbox ul li', function () {
+//     $('.agentbox ul li').removeClass('active');
+//     $(this).addClass('active');
+// });
 
 // toggle light & dark mode
 // $(document).ready(function(){
