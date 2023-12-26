@@ -60783,6 +60783,8 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   filter: brightness(.2);
 }
 
+/* here */
+
 .SubscriptionModal {
   z-index: 99999
 }
@@ -60815,12 +60817,15 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 }
 
 .SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   justify-content: center;
+  margin-top: 5px;
 }
 
 .SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .reatePox .stars .rate-data {
   font-family: inherit;
-  margin-top: 10px;
 }
 
 .SubscriptionModal .SuscriptionBody .right-side .uperbox-rate .SubscrTitle {
@@ -61133,16 +61138,55 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 .rate-customer button {
   border: 0;
   padding: 0;
+      background: unset;
 }
 
 .rate-customer .dropdown-menu {
   padding: 20px;
   margin-top: 8px !important;
+  min-width: max-content;
 }
 
 .rate-customer .btn-confirm-rate {margin: 0 auto;display: block;margin-top: 25px;padding: 5px 15px;border-radius: 3px;background: #702283;color: #fff;text-transform: capitalize;font-size: 14px;}
 
-.rate-customer h5 {margin-bottom: 18px;text-align: center;font-size: 16px;}
+.rate-customer h5 {margin-bottom: 18px;font-size: 16px;}
+
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 28px;
+  font-size: 17px;
+  width: 100px;
+  font-family: bootstrap-icons !important;
+}
+
+.star-rating:before {
+  content: "\f588\f588\f588\f588\f588";
+  color: #97818859;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-weight: bold;
+  display: flex;
+  letter-spacing: 4px;
+}
+
+.star-rating span {
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+}
+
+.star-rating span:before {
+  content: "\f586\f586\f586\f586\f586";
+  top: 0;
+  position: absolute;
+  left: 0;
+  color: #FFC107;
+  letter-spacing: 4px;
+}
 
 .feedback {
   --normal: #ECEAF3;
@@ -61159,26 +61203,26 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .feedback li {
-  position: relative;
-  border-radius: 50%;
-  background: var(--sb, var(--normal));
-  box-shadow: inset 3px -3px 4px var(--sh, var(--normal-shadow));
-  transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.feedback li:not(:last-child) {
-  margin-right: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
 }
 
 .feedback li div {
   width: 40px;
   height: 40px;
   position: relative;
-  transform: perspective(240px) translateZ(4px);
+  border-radius: 50%;
+  background: var(--sb, var(--normal));
+  box-shadow: inset 3px -3px 4px var(--sh, var(--normal-shadow));
+  transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .feedback li div svg,
@@ -61230,7 +61274,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   transition: background 0.4s;
 }
 
-.feedback li.angry {
+.feedback li.angry div{
   --step-1-rx: -24deg;
   --step-1-ry: 20deg;
   --step-2-rx: -24deg;
@@ -61251,7 +61295,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   stroke-dashoffset: 8.15;
 }
 
-.feedback li.angry.active {
+.feedback li.angry.active div{
   -webkit-animation: angry 1s linear;
   animation: angry 1s linear;
 }
@@ -61426,49 +61470,16 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   cursor: pointer;
 }
 
-.feedback li:not(.active):active {
-  transform: scale(0.925);
-}
-
 .feedback li.active,
 .feedback li:hover {
-  --sb: var(--active);
-  --sh: var(--active-shadow);
-  --m: var(--active-mouth);
-  --e: var(--active-eye);
-}
-
-.feedback li.active div {
-  -webkit-animation: shake 0.8s linear forwards;
-  animation: shake 0.8s linear forwards;
-}
-
-@-webkit-keyframes shake {
-  30% {
-    transform: perspective(240px) rotateX(var(--step-1-rx, 0deg)) rotateY(var(--step-1-ry, 0deg)) rotateZ(var(--step-1-rz, 0deg)) translateZ(10px);
-  }
-
-  60% {
-    transform: perspective(240px) rotateX(var(--step-2-rx, 0deg)) rotateY(var(--step-2-ry, 0deg)) rotateZ(var(--step-2-rz, 0deg)) translateZ(10px);
-  }
-
-  100% {
-    transform: perspective(240px) translateZ(4px);
-  }
-}
-
-@keyframes shake {
-  30% {
-    transform: perspective(240px) rotateX(var(--step-1-rx, 0deg)) rotateY(var(--step-1-ry, 0deg)) rotateZ(var(--step-1-rz, 0deg)) translateZ(10px);
-  }
-
-  60% {
-    transform: perspective(240px) rotateX(var(--step-2-rx, 0deg)) rotateY(var(--step-2-ry, 0deg)) rotateZ(var(--step-2-rz, 0deg)) translateZ(10px);
-  }
-
-  100% {
-    transform: perspective(240px) translateZ(4px);
-  }
+  --sb: var(
+  --active);
+  --sh: var(
+  --active-shadow);
+  --m: var(
+  --active-mouth);
+  --e: var(
+  --active-eye);
 }
 
 @-webkit-keyframes tear {
