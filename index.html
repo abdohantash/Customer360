@@ -167,75 +167,76 @@
               </div>
 
               <div class="dropdown rate-customer">
-                <button class="" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                <button class="" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                  aria-expanded="false">
                   <ul class="feedback">
                     <li class="ok active">
-                        <div></div>
+                      <div></div>
                     </li>
-                </ul>
+                  </ul>
                 </button>
                 <div class="dropdown-menu">
                   <h5>Customer evaluation</h5>
                   <ul class="feedback">
                     <li class="angry">
-                        <div>
-                            <svg class="eye left">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="eye right">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="mouth">
-                                <use xlink:href="#mouth">
-                            </svg>
-                        </div>
-                        Very Unpleasant
+                      <div>
+                        <svg class="eye left">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="eye right">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="mouth">
+                          <use xlink:href="#mouth">
+                        </svg>
+                      </div>
+                      Very Unpleasant
                     </li>
                     <li class="sad">
-                        <div>
-                            <svg class="eye left">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="eye right">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="mouth">
-                                <use xlink:href="#mouth">
-                            </svg>
-                        </div>
-                        Unpleasant
+                      <div>
+                        <svg class="eye left">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="eye right">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="mouth">
+                          <use xlink:href="#mouth">
+                        </svg>
+                      </div>
+                      Unpleasant
                     </li>
                     <li class="ok">
-                        <div></div>
-                        Neither Pleasant nor Unpleasant
+                      <div></div>
+                      Neither Pleasant nor Unpleasant
                     </li>
                     <li class="good">
-                        <div>
-                            <svg class="eye left">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="eye right">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="mouth">
-                                <use xlink:href="#mouth">
-                            </svg>
-                        </div>
-                        Pleasant
+                      <div>
+                        <svg class="eye left">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="eye right">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="mouth">
+                          <use xlink:href="#mouth">
+                        </svg>
+                      </div>
+                      Pleasant
                     </li>
                     <li class="happy">
-                        <div>
-                            <svg class="eye left">
-                                <use xlink:href="#eye">
-                            </svg>
-                            <svg class="eye right">
-                                <use xlink:href="#eye">
-                            </svg>
-                        </div>
-                        Very Pleasant
+                      <div>
+                        <svg class="eye left">
+                          <use xlink:href="#eye">
+                        </svg>
+                        <svg class="eye right">
+                          <use xlink:href="#eye">
+                        </svg>
+                      </div>
+                      Very Pleasant
                     </li>
-                </ul>
-                <button class="btn-confirm-rate">add feedback</button>
+                  </ul>
+                  <button class="btn-confirm-rate">add feedback</button>
                 </div>
               </div>
 
@@ -2395,7 +2396,7 @@
                     <div class="right-side">
                       <div class="TableRate">
                         <div class="table-responsive">
-                          <table class="table table-striped">
+                          <table class="table">
                             <thead class="table">
                               <tr>
                                 <th>Subscriber_ID</th>
@@ -3555,14 +3556,14 @@
 
 
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="eye">
-        <path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
+      <path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
     </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 7" id="mouth">
-        <path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
+      <path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
     </symbol>
-</svg>
+  </svg>
   <!--begin::Javascript-->
   <script src="assets/plugins/global/plugins.bundle.js"></script>
   <script src="assets/plugins/apexcharts.min.js"></script>
@@ -3570,15 +3571,51 @@
   <script src="assets/plugins/circle-progress.js"></script>
   <script src="assets/plugins/datatable/datatables.bundle.js"></script>
   <script src="assets/plugins/slidercaptcha/longbow.slidercaptcha.js"></script>
+  <script src="assets/plugins/confetti.bundle.min.js"></script>
   <script src="assets/js/scripts-custom.js"></script>
 
   <script>
-  $('.dropdown-menu .feedback li').on('click', function () {
-    // Remove 'active' class from all li elements
-    $('.dropdown-menu .feedback li').removeClass('active');
-    // Add 'active' class to the clicked li element
-    $(this).addClass('active');
+    $(document).ready(function() {
+    const duration = 10 * 1000,
+      animationEnd = Date.now() + duration,
+      defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function () {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        })
+      );
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        })
+      );
+    }, 250);
   });
+  </script>
+
+  <script>
+    $('.dropdown-menu .feedback li').on('click', function () {
+      // Remove 'active' class from all li elements
+      $('.dropdown-menu .feedback li').removeClass('active');
+      // Add 'active' class to the clicked li element
+      $(this).addClass('active');
+    });
   </script>
 
   <script>
