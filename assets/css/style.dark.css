@@ -61101,6 +61101,41 @@ table p {
   display: none;
 }
 
+.total-answer {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.apexcharts-text {
+  fill: #BCBCCB;
+}
+
+.apexcharts-legend-text {
+  color: #BCBCCB !important;
+}
+
+.apexcharts-grid line {
+  stroke: #452c60;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid rgb(27 12 44) !important;
+  background: rgb(27 12 44) !important;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #1a0c2b !important;
+  border-bottom: 1px solid #2c1b3f !important;
+}
+
+.apexcharts-series.apexcharts-pie-series path {
+  stroke: #1b0c2c;
+}
+
 /* responsive */
 @media (max-width:1300px) {
   .bottom-part {
