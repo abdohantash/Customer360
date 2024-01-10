@@ -60542,7 +60542,7 @@ table p {
   bottom: 0;
   z-index: 9;
   background: #1c0c2d;
-  width: 40%;
+  width: 45%;
   right: 0;
   transition: .3s;
   transform: translate(100%);
@@ -60551,9 +60551,6 @@ table p {
   padding: 15px;
   height: 100%;
   overflow: auto;
-}
-
-.superAgentRight {
 }
 
 .overlay-menu-right {
@@ -60576,7 +60573,7 @@ table p {
 .overlay-menu-right .close-menu {
   position: absolute;
   left: auto;
-  right: 41%;
+  right: 46%;
   color: #fff !important;
   font-size: 30px !important;
   top: 13px;
@@ -60685,6 +60682,7 @@ table p {
   margin-bottom: 17px;
   font-size: 17px;
   font-weight: normal;
+  text-align: center;
 }
 
 .star-rating {
@@ -60739,7 +60737,6 @@ table p {
   padding: 0;
   list-style: none;
   display: flex;
-  flex-direction: column;
   gap: 12px;
 }
 

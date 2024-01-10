@@ -60917,8 +60917,8 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   top: 0;
   bottom: 0;
   z-index: 9;
-  background: #1d0c2e;
-  width: 40%;
+  background: #fff;
+  width: 45%;
   right: 0;
   transition: .3s;
   transform: translate(100%);
@@ -60927,10 +60927,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   padding: 15px;
   height: 100%;
   overflow: auto;
-}
-
-.superAgentRight {
-  background: #fff;
 }
 
 .overlay-menu-right {
@@ -60953,7 +60949,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 .overlay-menu-right .close-menu {
   position: absolute;
   left: auto;
-  right: 41%;
+  right: 46%;
   color: #fff !important;
   font-size: 30px !important;
   top: 13px;
@@ -61062,6 +61058,7 @@ div.dataTables_wrapper div.dataTables_length select:focus {
 .rate-customer h5 {
   margin-bottom: 18px;
   font-size: 16px;
+  text-align: center;
 }
 
 .star-rating {
@@ -61116,7 +61113,6 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   padding: 0;
   list-style: none;
   display: flex;
-  flex-direction: column;
   gap: 12px;
 }
 
