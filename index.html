@@ -14,11 +14,20 @@
   <link href="assets/plugins/global/microtip.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link href="assets/css/style.dark.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/style.light.css" rel="stylesheet" type="text/css" />
   <!-- <link href="assets/css/style.light.css" rel="stylesheet" type="text/css" /> -->
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
+  <div class="ramadan-img">
+    <img class="img-1"
+      src="assets/media/ramadan/bg1.png" />
+    <img class="img-2"
+      src="assets/media/ramadan/bg2.png" />
+    <img class="img-3"
+      src="assets/media/ramadan/bg1.png" />
+  </div>
+
   <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
     <div class="page d-flex flex-column flex-column-fluid">
@@ -129,6 +138,9 @@
           </div>
         </div>
       </div>
+
+      <div class="bg-ramadan"
+        style="background-image: url(assets/media/ramadan/ramadan.gif);"></div>
 
       <div class="wrapper d-flex flex-column flex-row-fluid container-xxl">
         <div class="d-flex flex-row flex-column-fluid align-items-stretch">
@@ -3578,38 +3590,77 @@
   <script src="assets/js/scripts-custom.js"></script>
 
   <script>
-    $(document).ready(function() {
-    const duration = 10 * 1000,
-      animationEnd = Date.now() + duration,
-      defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+    $(document).ready(function () {
+      const end = Date.now() + 5 * 1000;
+      const colors = ["#AA20A6", "#ffffff"];
+      (function frame() {
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors,
+        });
 
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors,
+        });
 
-    const interval = setInterval(function () {
-      const timeLeft = animationEnd - Date.now();
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        } else {
+          $("#confetti").fadeOut();
+        }
+      })();
+      var activeClass = "active";
+      $(".ramadan-img").addClass(activeClass);
+      setTimeout(function () {
+        $(".ramadan-img").removeClass(activeClass);
+      }, 5000);
+    });
+  </script>
 
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
+  <!-- <script>
+    $(document).ready(function () {
+      const duration = 10 * 1000,
+        animationEnd = Date.now() + duration,
+        defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
       }
 
-      const particleCount = 50 * (timeLeft / duration);
-      // since particles fall down, start a bit higher than random
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        })
-      );
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        })
-      );
-    }, 250);
-  });
+      const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+
+        const particleCount = 50 * (timeLeft / duration);
+        // since particles fall down, start a bit higher than random
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+          })
+        );
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+          })
+        );
+      }, 250);
+    });
+  </script> -->
+
+  <script>
+
   </script>
 
   <script>
