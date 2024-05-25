@@ -19,14 +19,14 @@
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
-  <div class="ramadan-img">
+<!-- <div class="ramadan-img">
     <img class="img-1"
       src="assets/media/ramadan/bg1.png" />
     <img class="img-2"
       src="assets/media/ramadan/bg2.png" />
     <img class="img-3"
       src="assets/media/ramadan/bg1.png" />
-  </div>
+  </div> -->
 
   <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
@@ -139,8 +139,8 @@
         </div>
       </div>
 
-      <div class="bg-ramadan"
-        style="background-image: url(assets/media/ramadan/ramadan.gif);"></div>
+    <!--  <div class="bg-ramadan"
+        style="background-image: url(assets/media/ramadan/ramadan.gif);"></div> -->
 
       <div class="wrapper d-flex flex-column flex-row-fluid container-xxl">
         <div class="d-flex flex-row flex-column-fluid align-items-stretch">
@@ -360,6 +360,11 @@
                 </ul>
               </div>
             </div>
+            <div class="card mt-4">
+              <div class="card-body">
+                <div class="chart-consumption" id="chart-consumption"></div>
+              </div>
+            </div>
             <div class="flex-cards">
               <div class="card management">
                 <div class="card-body">
@@ -569,7 +574,6 @@
                                 </div>
                             </div> -->
             </div>
-
             <div class="card mt-4">
               <div class="card-body">
                 <ul class="grid-charts">
@@ -3589,7 +3593,7 @@
   <script src="assets/plugins/confetti.bundle.min.js"></script>
   <script src="assets/js/scripts-custom.js"></script>
 
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       const end = Date.now() + 5 * 1000;
       const colors = ["#AA20A6", "#ffffff"];
@@ -3622,7 +3626,7 @@
         $(".ramadan-img").removeClass(activeClass);
       }, 5000);
     });
-  </script>
+  </script> -->
 
   <!-- <script>
     $(document).ready(function () {
@@ -3658,10 +3662,6 @@
       }, 250);
     });
   </script> -->
-
-  <script>
-
-  </script>
 
   <script>
     $('.dropdown-menu .feedback li').on('click', function () {
@@ -4428,3 +4428,135 @@
       });
     });
   </script>
+
+  <script>
+    var chartConsumption = echarts.init(document.getElementById('chart-consumption'));
+    const consumptionIcon = {
+      consumption: 'assets/media/icons/consumption.png',
+    };
+    const icons = {
+      'Gaming_Percentage': 'assets/media/icons/gaming.png',
+      'Social_Percentage': 'assets/media/icons/social.png',
+      'Streaming_Video_Percentage': 'assets/media/icons/streaming.png',
+      'Content_Down_Percentage': 'assets/media/icons/download.png',
+      'Content_Up_Percentage': 'assets/media/icons/upload.png',
+      'Web_Percentage': 'assets/media/icons/web.png',
+      'Others_Percentage': 'assets/media/icons/others.png',
+      'highest': 'assets/media/icons/g.png'
+    };
+
+    const data = [
+    { name: 'Gaming_Percentage', value: 30 },
+    { name: 'Social_Percentage', value: 10 },
+    { name: 'Streaming_Video_Percentage', value: 22 },
+    { name: 'Content_Down_Percentage', value: 15 },
+    { name: 'Content_Up_Percentage', value: 3 },
+    { name: 'Web_Percentage', value: 5 },
+    { name: 'Others_Percentage', value: 15 }
+  ];
+
+  const maxValueConsumption = Math.max(...data.map(item => item.value));
+  const maxItem = data.find(item => item.value === maxValueConsumption);
+
+  var option = {
+    tooltip: {
+      trigger: 'item',
+      axisPointer: {
+        type: 'shadow'
+      },
+      formatter: function(params) {
+        let icon = icons[params.seriesName];
+        return `
+          <div style="display: flex; align-items: center;">
+            <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;">
+            <span>${params.seriesName}: ${params.value} %</span>
+          </div>
+        `;
+      }
+    },
+    legend: {},
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'value',
+      showGrid: false,
+      splitLine: {
+        show: false
+      },
+      axisLabel: {
+        show: false
+      },
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['consumption'],
+      axisLabel: {
+        formatter: function (value) {
+          return '{' + value + '| }\n{value|' + value + '}';
+        },
+        margin: 20,
+        rich: {
+          value: {
+            lineHeight: 30,
+            fontSize: '15',
+            align: 'center'
+          },
+          consumption: {
+            height: 40,
+            align: 'center',
+            backgroundColor: {
+              image: consumptionIcon.consumption
+            }
+          }
+        }
+      }
+    },
+    series: data.map(item => ({
+      name: item.name,
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true,
+        position: 'inside',
+        fontSize: 13
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [item.value],
+      barWidth: 28,
+      itemStyle: {
+        borderRadius: [50]
+      },
+      markPoint: item.value === maxValueConsumption ? {
+        data: [
+          {
+            type: 'max',
+            name: 'Max',
+            symbol: `image://${icons['highest']}`,
+            symbolSize: [40, 40],
+            symbolOffset: [-25, -20],
+            label: {
+              show: false
+            },
+            tooltip: {
+              showContent: false
+            }
+          }
+        ]
+      } : {}
+    }))
+  };
+
+  chartConsumption.setOption(option);
+</script>

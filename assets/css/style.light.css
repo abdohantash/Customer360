@@ -61491,6 +61491,10 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   gap: 10px;
 }
 
+.chart-consumption {
+  height: 115px;
+}
+
 /* ramadan confetti */
 .ramadan-img {
   position: fixed;
