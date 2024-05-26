@@ -4432,17 +4432,17 @@
   <script>
     var chartConsumption = echarts.init(document.getElementById('chart-consumption'));
     const consumptionIcon = {
-      consumption: 'assets/media/icons/consumption.png',
+      consumption: 'assets/media/icons/consumption/consumption.png',
     };
     const icons = {
-      'Gaming_Percentage': 'assets/media/icons/gaming.png',
-      'Social_Percentage': 'assets/media/icons/social.png',
-      'Streaming_Video_Percentage': 'assets/media/icons/streaming.png',
-      'Content_Down_Percentage': 'assets/media/icons/download.png',
-      'Content_Up_Percentage': 'assets/media/icons/upload.png',
-      'Web_Percentage': 'assets/media/icons/web.png',
-      'Others_Percentage': 'assets/media/icons/others.png',
-      'highest': 'assets/media/icons/g.png'
+      'Gaming_Percentage': 'assets/media/icons/consumption/gaming.png',
+      'Social_Percentage': 'assets/media/icons/consumption/social.png',
+      'Streaming_Video_Percentage': 'assets/media/icons/consumption/streaming.png',
+      'Content_Down_Percentage': 'assets/media/icons/consumption/download.png',
+      'Content_Up_Percentage': 'assets/media/icons/consumption/upload.png',
+      'Web_Percentage': 'assets/media/icons/consumption/web.png',
+      'Others_Percentage': 'assets/media/icons/consumption/others.png',
+      'highest': 'assets/media/icons/consumption/gaming-highest.png'
     };
 
     const data = [
@@ -4469,7 +4469,7 @@
         return `
           <div style="display: flex; align-items: center;">
             <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;">
-            <span>${params.seriesName}: ${params.value} %</span>
+            <span>${params.seriesName}: ${params.value}%</span>
           </div>
         `;
       }
@@ -4535,17 +4535,14 @@
       },
       data: [item.value],
       barWidth: 28,
-      itemStyle: {
-        borderRadius: [50]
-      },
       markPoint: item.value === maxValueConsumption ? {
         data: [
           {
             type: 'max',
             name: 'Max',
             symbol: `image://${icons['highest']}`,
-            symbolSize: [40, 40],
-            symbolOffset: [-25, -20],
+            symbolSize: [70, 70],
+            symbolOffset: ['-250%', -49],
             label: {
               show: false
             },
