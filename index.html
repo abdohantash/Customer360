@@ -380,7 +380,7 @@
                   </div>
                 </div>
               </div>
-            <!--  <div class="card management">
+              <!--  <div class="card management">
                 <div class="card-body">
                   <button class="refresh">
                     <img src="assets/media/icons/icon-process.svg" alt="">
@@ -4415,7 +4415,9 @@
   </script>
 
   <script>
-    var chartConsumption = echarts.init(document.getElementById('chart-consumption'));
+    var chartConsumption = echarts.init(document.getElementById('chart-consumption'), null, {
+      renderer: 'svg'
+    });
     const icons = {
       'Gaming_Percentage': 'assets/media/icons/consumption/gaming.png',
       'Social_Percentage': 'assets/media/icons/consumption/social.png',
@@ -4456,39 +4458,22 @@
       },
       legend: {},
       grid: {
+        top: '5%',
         left: '3%',
         right: '3%',
         bottom: '3%',
         containLabel: true
       },
       xAxis: {
-        type: 'category',
-        data: categories,
-        splitLine: {
-          show: false
-        },
-        axisLabel: {
-          show: false
-        },
-        axisTick: {
-          show: false
-        }
+        type: 'value',
       },
       yAxis: {
-        type: 'value',
-        showGrid: false,
-        splitLine: {
-          show: false
-        },
+        type: 'category',
+        data: categories,
         axisLabel: {
           show: false
         },
-        axisLine: {
-          show: false
-        },
-        axisTick: {
-          show: false
-        }
+
       },
       series: [
         {
@@ -4496,7 +4481,7 @@
             value,
             itemStyle: {
               color: colors[index],
-              borderRadius: index === maxIndex ? [0, 0, 0, 0] : [50, 50, 0, 0]
+              borderRadius: [0, 50, 50, 0]
             }
           })),
           type: 'bar',
@@ -4509,7 +4494,6 @@
           emphasis: {
             focus: 'series'
           },
-          barWidth: 40,
         },
         {
           type: 'scatter',
@@ -4517,7 +4501,7 @@
             value: index === maxIndex ? value : null,
             symbol: `image://${icons.highest}`,
             symbolSize: 50,
-            symbolOffset: [4, '-50%']
+            symbolOffset: [-22, '-68%']
           })),
           z: 3
         }
