@@ -19,7 +19,7 @@
 </head>
 
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
-<!-- <div class="ramadan-img">
+  <!-- <div class="ramadan-img">
     <img class="img-1"
       src="assets/media/ramadan/bg1.png" />
     <img class="img-2"
@@ -139,7 +139,7 @@
         </div>
       </div>
 
-    <!--  <div class="bg-ramadan"
+      <!--  <div class="bg-ramadan"
         style="background-image: url(assets/media/ramadan/ramadan.gif);"></div> -->
 
       <div class="wrapper d-flex flex-column flex-row-fluid container-xxl">
@@ -360,11 +360,6 @@
                 </ul>
               </div>
             </div>
-            <div class="card mt-4">
-              <div class="card-body">
-                <div class="chart-consumption" id="chart-consumption"></div>
-              </div>
-            </div>
             <div class="flex-cards">
               <div class="card management">
                 <div class="card-body">
@@ -385,7 +380,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card management">
+            <!--  <div class="card management">
                 <div class="card-body">
                   <button class="refresh">
                     <img src="assets/media/icons/icon-process.svg" alt="">
@@ -403,24 +398,14 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="card management">
                 <div class="card-body">
                   <button class="refresh">
                     <img src="assets/media/icons/icon-process.svg" alt="">
                   </button>
-                  <h3 class="title-card"><i class="bi bi-arrow-down-up"></i>mobile internet</h3>
-                  <div class="management-consumed mobile-consumed">
-                    <div class="consumed">
-                      <div class="progress-consumed-internet"></div>
-                      <p>
-                        <span>4580 MB <em>Remaining of</em></span>
-                        <b>12000 MB</b>
-                      </p>
-                      <button type="button" class="check--dts" data-bs-toggle="modal"
-                        data-bs-target="#usage-details">check details</button>
-                    </div>
-                  </div>
+                  <h3 class="title-card"><i class="bi bi-graph-down-arrow"></i>consumption</h3>
+                  <div class="chart-consumption" id="chart-consumption"></div>
                 </div>
               </div>
               <!-- <div class="card management">
@@ -4431,9 +4416,6 @@
 
   <script>
     var chartConsumption = echarts.init(document.getElementById('chart-consumption'));
-    const consumptionIcon = {
-      consumption: 'assets/media/icons/consumption/consumption.png',
-    };
     const icons = {
       'Gaming_Percentage': 'assets/media/icons/consumption/gaming.png',
       'Social_Percentage': 'assets/media/icons/consumption/social.png',
@@ -4444,116 +4426,104 @@
       'Others_Percentage': 'assets/media/icons/consumption/others.png',
       'highest': 'assets/media/icons/consumption/gaming-highest.png'
     };
+    var categories = ['Gaming_Percentage', 'Social_Percentage', 'Streaming_Video_Percentage', 'Content_Down_Percentage', 'Content_Up_Percentage', 'Web_Percentage', 'Others_Percentage'];
+    var data = [30, 10, 22, 15, 3, 5, 15];
+    var colors = ['#5470C6', '#91CC75', '#FAC858', '#EE6666', '#73C0DE', '#3BA272', '#FC8452'];
 
-    const data = [
-    { name: 'Gaming_Percentage', value: 30 },
-    { name: 'Social_Percentage', value: 10 },
-    { name: 'Streaming_Video_Percentage', value: 22 },
-    { name: 'Content_Down_Percentage', value: 15 },
-    { name: 'Content_Up_Percentage', value: 3 },
-    { name: 'Web_Percentage', value: 5 },
-    { name: 'Others_Percentage', value: 15 }
-  ];
+    var maxIndex = data.indexOf(Math.max(...data));
 
-  const maxValueConsumption = Math.max(...data.map(item => item.value));
-  const maxItem = data.find(item => item.value === maxValueConsumption);
-
-  var option = {
-    tooltip: {
-      trigger: 'item',
-      axisPointer: {
-        type: 'shadow'
-      },
-      formatter: function(params) {
-        let icon = icons[params.seriesName];
-        return `
-          <div style="display: flex; align-items: center;">
-            <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;">
-            <span>${params.seriesName}: ${params.value}%</span>
-          </div>
-        `;
-      }
-    },
-    legend: {},
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis: {
-      type: 'value',
-      showGrid: false,
-      splitLine: {
-        show: false
-      },
-      axisLabel: {
-        show: false
-      },
-      axisLine: {
-        show: false
-      },
-      axisTick: {
-        show: false
-      }
-    },
-    yAxis: {
-      type: 'category',
-      data: ['consumption'],
-      axisLabel: {
-        formatter: function (value) {
-          return '{' + value + '| }\n{value|' + value + '}';
+    var option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
         },
-        margin: 20,
-        rich: {
-          value: {
-            lineHeight: 30,
-            fontSize: '15',
-            align: 'center'
-          },
-          consumption: {
-            height: 40,
-            align: 'center',
-            backgroundColor: {
-              image: consumptionIcon.consumption
+        formatter: function (params) {
+          var content = '';
+          params.forEach(function (item) {
+            if (item.seriesType === 'bar') {
+              var icon = icons[item.name];
+              content += `
+            <div style="display: flex; align-items: center;">
+              <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;" />
+              ${item.name.replace(/_/g, ' ')}: ${item.value}%
+            </div>
+          `;
             }
-          }
+          });
+          return content;
         }
-      }
-    },
-    series: data.map(item => ({
-      name: item.name,
-      type: 'bar',
-      stack: 'total',
-      label: {
-        show: true,
-        position: 'inside',
-        fontSize: 13
       },
-      emphasis: {
-        focus: 'series'
+      legend: {},
+      grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
       },
-      data: [item.value],
-      barWidth: 28,
-      markPoint: item.value === maxValueConsumption ? {
-        data: [
-          {
-            type: 'max',
-            name: 'Max',
-            symbol: `image://${icons['highest']}`,
-            symbolSize: [70, 70],
-            symbolOffset: ['-250%', -49],
-            label: {
-              show: false
-            },
-            tooltip: {
-              showContent: false
+      xAxis: {
+        type: 'category',
+        data: categories,
+        splitLine: {
+          show: false
+        },
+        axisLabel: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        }
+      },
+      yAxis: {
+        type: 'value',
+        showGrid: false,
+        splitLine: {
+          show: false
+        },
+        axisLabel: {
+          show: false
+        },
+        axisLine: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        }
+      },
+      series: [
+        {
+          data: data.map((value, index) => ({
+            value,
+            itemStyle: {
+              color: colors[index],
+              borderRadius: index === maxIndex ? [0, 0, 0, 0] : [50, 50, 0, 0]
             }
-          }
-        ]
-      } : {}
-    }))
-  };
+          })),
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true,
+            position: 'inside',
+            fontSize: 13
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          barWidth: 40,
+        },
+        {
+          type: 'scatter',
+          data: data.map((value, index) => ({
+            value: index === maxIndex ? value : null,
+            symbol: `image://${icons.highest}`,
+            symbolSize: 50,
+            symbolOffset: [4, '-50%']
+          })),
+          z: 3
+        }
+      ]
+    };
 
-  chartConsumption.setOption(option);
-</script>
+    chartConsumption.setOption(option);
+
+  </script>
