@@ -61491,6 +61491,11 @@ div.dataTables_wrapper div.dataTables_length select:focus {
   gap: 10px;
 }
 
+.consumption-card {
+  min-width: 225px;
+  width: 225px;
+}
+
 .chart-consumption {
   height: 240px;
 }
