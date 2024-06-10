@@ -4415,71 +4415,89 @@
   </script>
 
   <script>
-    var chartConsumption = echarts.init(document.getElementById('chart-consumption'), null, {
-      renderer: 'svg'
-    });
+  var chartConsumption = echarts.init(document.getElementById('chart-consumption'), null, {
+  renderer: 'svg'
+});
+const icons = {
+  'Gaming_Percentage': 'assets/media/icons/consumption/gaming.png',
+  'Social_Percentage': 'assets/media/icons/consumption/social.png',
+  'Streaming_Video_Percentage': 'assets/media/icons/consumption/streaming.png',
+  'Content_Down_Percentage': 'assets/media/icons/consumption/download.png',
+  'Content_Up_Percentage': 'assets/media/icons/consumption/upload.png',
+  'Web_Percentage': 'assets/media/icons/consumption/web.png',
+  'Others_Percentage': 'assets/media/icons/consumption/others.png',
+  'highest': 'assets/media/icons/consumption/gaming-highest.png'
+};
+var categories = ['Gaming_Percentage', 'Social_Percentage', 'Streaming_Video_Percentage', 'Content_Down_Percentage', 'Content_Up_Percentage', 'Web_Percentage', 'Others_Percentage'];
+var data = [30, 10, 22, 15, 3, 5, 15];
+var colors = ['#5470C6', '#91CC75', '#FAC858', '#EE6666', '#73C0DE', '#3BA272', '#FC8452'];
 
-    const icons = {
-      'Gaming_Percentage': 'assets/media/icons/consumption/gaming.png',
-      'Social_Percentage': 'assets/media/icons/consumption/social.png',
-      'Streaming_Video_Percentage': 'assets/media/icons/consumption/streaming.png',
-      'Content_Down_Percentage': 'assets/media/icons/consumption/download.png',
-      'Content_Up_Percentage': 'assets/media/icons/consumption/upload.png',
-      'Web_Percentage': 'assets/media/icons/consumption/web.png',
-      'Others_Percentage': 'assets/media/icons/consumption/others.png',
-      'highest': 'assets/media/icons/consumption/gaming-highest.png'
-    };
+// Create an array of objects to sort the data
+var dataObjects = data.map((value, index) => ({
+  category: categories[index],
+  value: value,
+  color: colors[index]
+}));
 
-    const data = [
-    { name: 'Gaming_Percentage', value: 30 },
-    { name: 'Social_Percentage', value: 10 },
-    { name: 'Streaming_Video_Percentage', value: 22 },
-    { name: 'Content_Down_Percentage', value: 15 },
-    { name: 'Content_Up_Percentage', value: 3 },
-    { name: 'Web_Percentage', value: 5 },
-    { name: 'Others_Percentage', value: 15 }
-  ];
+// Sort the array of objects in descending order based on the value
+dataObjects.sort((a, b) => b.value - a.value);
 
-  const maxValueConsumption = Math.max(...data.map(item => item.value));
-  const maxItem = data.find(item => item.value === maxValueConsumption);
+// Extract sorted categories, data, and colors
+var sortedCategories = dataObjects.map(obj => obj.category);
+var sortedData = dataObjects.map(obj => obj.value);
+var sortedColors = dataObjects.map(obj => obj.color);
 
-  var option = {
-    tooltip: {
-      trigger: 'item',
-      axisPointer: {
-        type: 'shadow'
-      },
-      formatter: function(params) {
-        let icon = icons[params.seriesName];
-        return `
-          <div style="display: flex; align-items: center;">
-            <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;">
-            <span>${params.seriesName}: ${params.value}%</span>
-          </div>
-        `;
-      }
+var maxIndex = sortedData.indexOf(Math.max(...sortedData));
+
+var option = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
     },
-    grid: {
-      top: '8%',
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
+    formatter: function (params) {
+      var content = '';
+      params.forEach(function (item) {
+        if (item.seriesType === 'bar') {
+          var icon = icons[item.name];
+          content += `
+            <div style="display: flex; align-items: center;">
+              <img src="${icon}" style="width: 20px; height: 20px; margin-right: 10px;" />
+              ${item.name.replace(/_/g, ' ')}: ${item.value}%
+            </div>
+          `;
+        }
+      });
+      return content;
+    }
+  },
+  legend: {},
+  grid: {
+    top: '5%',
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'value',
+  },
+  yAxis: {
+    type: 'category',
+    data: sortedCategories,
+    axisLabel: {
+      show: false
     },
-
-    xAxis: {
-      type: 'category',
-        data: ['consumption'],
-        axisLabel: {
-          show: false
-        },
-        
-      },
-      yAxis: {
-        type: 'value'
-      },
-    series: data.map(item => ({
-      name: item.name,
+  },
+  series: [
+    {
+      data: sortedData.map((value, index) => ({
+        value,
+        itemStyle: {
+          color: sortedColors[index],
+          borderRadius: [0, 50, 50, 0]
+        }
+      })),
       type: 'bar',
       stack: 'total',
       label: {
@@ -4490,28 +4508,20 @@
       emphasis: {
         focus: 'series'
       },
-      data: [item.value],
-      barWidth: 28,
-      markPoint: item.value === maxValueConsumption ? {
-        data: [
-          {
-            type: 'max',
-            name: 'Max',
-            symbol: `image://${icons['highest']}`,
-            symbolSize: [30, 30],
-            symbolOffset: [-35,20],
-            label: {
-              show: false
-            },
-            tooltip: {
-              showContent: false
-            }
-          }
-        ]
-      } : {}
-    }))
-  };
+    },
+    {
+      type: 'scatter',
+      data: sortedData.map((value, index) => ({
+        value: index === maxIndex ? value : null,
+        symbol: `image://${icons.highest}`,
+        symbolSize: 50,
+        symbolOffset: [-22, '-68%']
+      })),
+      z: 3
+    }
+  ]
+};
 
-  chartConsumption.setOption(option);
+chartConsumption.setOption(option);
 
   </script>
